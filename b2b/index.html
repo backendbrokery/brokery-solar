@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotovoltaico industriale Monza e Brianza | Brokery Solar — Incentivi 2026 per le imprese</title>
+<meta name="description" content="Il tuo capannone può iniziare a pagarsi l'energia da solo. Contributi a fondo perduto GSE fino al 65% con l'intervento integrato pompa di calore + fotovoltaico, oppure iperammortamento 2026. Analisi energetica e studio incentivi gratuiti.">
+<meta property="og:title" content="Fotovoltaico industriale in Brianza | Brokery Solar">
+<meta property="og:description" content="Incentivi 2026 per le imprese: la mappa completa e onesta. Analisi energetica e studio degli incentivi applicabili alla tua azienda, gratuiti.">
+<meta property="og:image" content="https://picsum.photos/seed/brokery-solar-b2b-og/1200/630">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary:    '#3A4159',
+        ink:        '#2E3448',
+        deep:       '#252A3C',
+        secondary:  '#F7F8FA',
+        accent:     '#077FBD',
+        accentsoft: '#E8F4FB',
+        light:      '#6FC9EB',
+        yellow:     '#FFD800',
+        yellowdark: '#FFB103',
+        yellowsoft: '#FFF7D6'
+      },
+      fontFamily: {
+        brand: ['Inter', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'ui-monospace', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.rd-1 { transition-delay: .08s; } .rd-2 { transition-delay: .16s; } .rd-3 { transition-delay: .24s; } .rd-4 { transition-delay: .32s; }
+[x-cloak] { display: none !important; }
+.grid-lines {
+  background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.eyebrow { letter-spacing: .18em; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+});
+</script>
+</head>
+<body class="bg-secondary font-brand text-primary antialiased">
+
+<!-- ══════════ NAV — nessun menu di navigazione (CTA unica, zero uscite) ══════════ -->
+<nav class="sticky top-0 z-50 bg-secondary/95 backdrop-blur border-b border-primary/10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16 gap-4">
+    <img src="https://fhpqhasmxdruhilvzxoz.supabase.co/storage/v1/object/sign/assets/brand-kit/083307f4-56aa-4b7d-9e35-a95d1d0096d8/41c612c8-f0d2-4a57-a884-0b852527024f.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83MjYwNDAzYS05MDI1LTQzNGYtOWFkMS1jMjMxOGUyYzE2MjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvYnJhbmQta2l0LzA4MzMwN2Y0LTU2YWEtNGI3ZC05ZTM1LWE5NWQxZDAwOTZkOC80MWM2MTJjOC1mMGQyLTRhNTctYTg4NC0wYjg1MjUyNzAyNGYucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MzUxNzc4MSwiZXhwIjoyMDk4ODc3NzgxfQ.L-1uo-NPCgtbecfbku4xPImH9zXEU9IDaZ54npGHA7U" alt="Brokery Solar" class="h-7 sm:h-8 w-auto">
+    <div class="flex items-center gap-3 sm:gap-5">
+      <a href="tel:+390000000000" class="flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        <span class="hidden sm:inline">[Telefono divisione business]</span>
+        <span class="sm:hidden">Chiama</span>
+      </a>
+      <a href="#consulenza" class="hidden sm:inline-block bg-yellow text-primary text-sm font-bold px-5 py-2.5 rounded-md hover:bg-yellowdark transition-colors">Parla con un esperto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════ SEZIONE 1 — HERO ══════════ -->
+<header class="relative bg-deep text-white overflow-hidden">
+  <img data-slot="hero-capannone" data-slot-brief="Aerial drone photograph of a large Italian industrial warehouse with a full rooftop solar panel installation, seen from above at a slight angle, industrial district in Brianza, clear daylight, documentary realism" src="https://picsum.photos/seed/brokery-b2b-hero/1900/1100" alt="Capannone industriale con impianto fotovoltaico in copertura" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="absolute inset-0 bg-gradient-to-r from-deep via-deep/95 to-deep/60"></div>
+  <div class="absolute inset-0 grid-lines"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-6 pt-16 pb-20 md:pt-24 md:pb-28 grid lg:grid-cols-12 gap-12 lg:gap-14">
+    <div class="lg:col-span-7">
+      <p class="font-mono text-[11px] uppercase eyebrow text-light mb-6">Fotovoltaico industriale · Monza, Brianza e Nord Milano</p>
+      <h1 class="text-[2.1rem] sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.06]">
+        Il tuo capannone può iniziare a pagarsi l'energia da solo.
+        <span class="text-light">E lo Stato copre una parte importante dell'investimento.</span>
+      </h1>
+      <p class="text-base sm:text-lg text-white/70 max-w-xl mt-7 leading-relaxed">
+        Contributi a fondo perduto GSE <strong class="text-white font-semibold">fino al 65%</strong> con l'intervento integrato pompa di calore + fotovoltaico, oppure <strong class="text-white font-semibold">iperammortamento 2026</strong> sull'investimento. Analisi energetica e studio degli incentivi applicabili alla tua azienda: gratuiti.
+      </p>
+
+      <a href="#consulenza" class="group inline-flex items-center gap-3 mt-9 bg-yellow text-primary font-bold text-sm sm:text-base px-7 py-4 rounded-md shadow-lg shadow-black/25 hover:bg-yellowdark hover:-translate-y-0.5 transition-transform duration-200">
+        Parla con un esperto di impianti fotovoltaici industriali
+        <span class="transition-transform group-hover:translate-x-1">→</span>
+      </a>
+
+      <div class="flex flex-wrap gap-x-7 gap-y-3 mt-8 text-sm text-white/65">
+        <span class="flex items-center gap-2"><span class="text-yellow font-mono">✓</span>Consulenza senza impegno</span>
+        <span class="flex items-center gap-2"><span class="text-yellow font-mono">✓</span>Risposta entro 24 ore lavorative</span>
+        <span class="flex items-center gap-2"><span class="text-yellow font-mono">✓</span>Pratiche GSE gestite da noi</span>
+      </div>
+    </div>
+
+    <!-- riepilogo strumenti -->
+    <div class="lg:col-span-5 lg:pt-4">
+      <div class="bg-white/[.07] backdrop-blur-sm border border-white/15 rounded-xl p-6 sm:p-7">
+        <p class="font-mono text-[10px] uppercase eyebrow text-white/50 mb-5">Gli strumenti in gioco nel 2026</p>
+        <div class="space-y-5">
+          <div class="flex gap-4">
+            <span class="font-mono text-2xl font-semibold text-yellow shrink-0 leading-none pt-0.5">65%</span>
+            <p class="text-sm text-white/70 leading-relaxed"><strong class="text-white font-semibold">Conto Termico 3.0</strong> — contributo a fondo perduto GSE fino al 65% delle spese ammissibili, sull'intervento integrato con pompa di calore.</p>
+          </div>
+          <div class="h-px bg-white/10"></div>
+          <div class="flex gap-4">
+            <span class="font-mono text-2xl font-semibold text-yellow shrink-0 leading-none pt-0.5">180%</span>
+            <p class="text-sm text-white/70 leading-relaxed"><strong class="text-white font-semibold">Iperammortamento 2026</strong> — maggiorazione fino al 180% del costo deducibile per gli investimenti dal 1/1/2026 al 30/9/2028.</p>
+          </div>
+          <div class="h-px bg-white/10"></div>
+          <div class="flex gap-4">
+            <span class="font-mono text-2xl font-semibold text-yellow shrink-0 leading-none pt-0.5">10%</span>
+            <p class="text-sm text-white/70 leading-relaxed"><strong class="text-white font-semibold">IVA agevolata</strong> — al posto del 22%, per impianti fino a 200 kW su edifici esistenti.</p>
+          </div>
+        </div>
+        <p class="text-[11px] text-white/40 leading-relaxed mt-6 pt-5 border-t border-white/10">Il «fino al 65%» si riferisce all'intervento integrato comprensivo della sostituzione dell'impianto termico con pompa di calore elettrica su edifici non residenziali. Dettagli e condizioni nella mappa incentivi.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ SEZIONE 2 — BARRA DI FIDUCIA BUSINESS ══════════ -->
+<section class="bg-white border-b border-primary/10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div class="flex gap-3.5 items-start">
+      <span class="w-10 h-10 rounded-lg bg-accentsoft text-accent flex items-center justify-center text-lg shrink-0">🏢</span>
+      <p class="text-sm text-primary/70 leading-snug"><strong class="text-primary font-semibold">Gruppo Brokery</strong><br>struttura, non improvvisazione</p>
+    </div>
+    <div class="flex gap-3.5 items-start">
+      <span class="w-10 h-10 rounded-lg bg-accentsoft text-accent flex items-center justify-center text-lg shrink-0">⏱</span>
+      <p class="text-sm text-primary/70 leading-snug"><strong class="text-primary font-semibold">Installazione in 30 giorni</strong><br>garantita, senza fermare la produzione</p>
+    </div>
+    <div class="flex gap-3.5 items-start">
+      <span class="w-10 h-10 rounded-lg bg-accentsoft text-accent flex items-center justify-center text-lg shrink-0">📋</span>
+      <p class="text-sm text-primary/70 leading-snug"><strong class="text-primary font-semibold">Pratiche GSE e dossier fiscale</strong><br>li prepariamo noi</p>
+    </div>
+    <div class="flex gap-3.5 items-start">
+      <span class="w-10 h-10 rounded-lg bg-accentsoft text-accent flex items-center justify-center text-lg shrink-0">🤝</span>
+      <p class="text-sm text-primary/70 leading-snug"><strong class="text-primary font-semibold">Un solo interlocutore</strong><br>dal sopralluogo al collaudo</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 3 — IL PROBLEMA ══════════ -->
+<section class="bg-primary text-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+    <p class="font-mono text-[11px] uppercase eyebrow text-light mb-5 reveal">Il punto di partenza</p>
+    <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] max-w-3xl mb-10 reveal">
+      L'energia è l'unico costo di produzione che non stai controllando
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6 md:gap-7">
+      <div class="reveal">
+        <div class="h-px w-10 bg-light mb-5"></div>
+        <p class="text-[15px] text-white/70 leading-relaxed">Materie prime: le negozi. Personale: lo pianifichi. Fornitori: li metti in gara. <strong class="text-white font-semibold">E l'energia? La subisci</strong>: un costo variabile, esposto ai mercati internazionali, che entra dritto nei tuoi margini senza chiederti il permesso.</p>
+      </div>
+      <div class="reveal rd-1">
+        <div class="h-px w-10 bg-light mb-5"></div>
+        <p class="text-[15px] text-white/70 leading-relaxed">Intanto, sopra la tua testa, ci sono centinaia di metri quadri di copertura: <strong class="text-white font-semibold">l'unico reparto della tua azienda che non produce niente.</strong></p>
+      </div>
+      <div class="reveal rd-2">
+        <div class="h-px w-10 bg-light mb-5"></div>
+        <p class="text-[15px] text-white/70 leading-relaxed">E c'è un terzo elemento: il 2026 ha aperto una <strong class="text-white font-semibold">finestra di incentivi per le imprese</strong> — tra contributi a fondo perduto GSE e nuovo iperammortamento — che non resterà aperta per sempre. Le risorse sono limitate e la corsa è già iniziata: a marzo 2026 il portale del GSE ha dovuto sospendere temporaneamente le domande per l'eccesso di richieste.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 md:mt-14 border-l-2 border-yellow pl-6 md:pl-8 reveal rd-3">
+      <p class="text-xl md:text-2xl font-bold leading-snug max-w-3xl">
+        La domanda non è <em class="not-italic text-white/50">se</em> investire nell'energia della tua azienda. È se farlo <span class="text-yellow">ora</span>, con lo Stato che co-finanzia, o <span class="text-white/50">dopo</span>, a prezzo pieno.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 4 — LA SOLUZIONE: L'INTERVENTO INTEGRATO ══════════ -->
+<section class="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+  <div class="max-w-3xl mb-12">
+    <p class="font-mono text-[11px] uppercase eyebrow text-primary/50 mb-5 reveal">La soluzione</p>
+    <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] mb-5 reveal">Non un impianto: un sistema energetico per la tua azienda</h2>
+    <p class="text-lg text-primary/65 leading-relaxed reveal rd-1">Per le imprese, il massimo vantaggio economico e incentivante si ottiene con l'<strong class="text-primary font-semibold">intervento integrato</strong> sull'edificio:</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+    <div class="relative bg-white rounded-xl border-2 border-yellowdark/60 p-7 reveal">
+      <span class="absolute -top-3 left-7 bg-yellow text-primary text-[10px] font-bold uppercase eyebrow px-2.5 py-1 rounded">La chiave</span>
+      <p class="w-14 h-14 rounded-xl bg-yellowsoft flex items-center justify-center text-2xl mb-5">🔥→⚡</p>
+      <h3 class="font-bold text-[15px] uppercase eyebrow mb-3">Pompa di calore elettrica</h3>
+      <p class="text-sm text-primary/65 leading-relaxed">Sostituisce il vecchio impianto termico: climatizzi con l'elettricità invece che con il gas. <strong class="text-primary font-semibold">È la chiave che apre il contributo a fondo perduto del GSE.</strong></p>
+    </div>
+    <div class="bg-white rounded-xl border border-primary/10 p-7 reveal rd-1">
+      <p class="w-14 h-14 rounded-xl bg-accentsoft flex items-center justify-center text-2xl mb-5">☀️</p>
+      <h3 class="font-bold text-[15px] uppercase eyebrow mb-3">Fotovoltaico industriale</h3>
+      <p class="text-sm text-primary/65 leading-relaxed">La copertura del capannone produce l'energia che alimenta la pompa di calore, i macchinari e le linee produttive.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-primary/10 p-7 reveal rd-2">
+      <p class="w-14 h-14 rounded-xl bg-accentsoft flex items-center justify-center text-2xl mb-5">🔋</p>
+      <h3 class="font-bold text-[15px] uppercase eyebrow mb-3">Accumulo</h3>
+      <p class="text-sm text-primary/65 leading-relaxed">L'energia prodotta e non consumata resta in azienda per i turni serali, i picchi e i carichi notturni.</p>
+    </div>
+  </div>
+
+  <div class="mt-6 bg-accentsoft rounded-xl border border-accent/25 p-7 md:p-8 reveal rd-3">
+    <p class="text-[15px] md:text-base text-primary/75 leading-relaxed">
+      <strong class="text-primary font-bold">Risultato:</strong> tagli contemporaneamente la bolletta elettrica <strong class="text-primary font-bold">E</strong> quella del gas, e accedi alla configurazione incentivante più favorevole prevista per le imprese.
+    </p>
+    <p class="text-sm text-primary/55 leading-relaxed mt-3">Dove l'intervento integrato non è applicabile, progettiamo il solo fotovoltaico con accumulo valorizzando l'iperammortamento e gli altri strumenti fiscali.</p>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 5 — MAPPA INCENTIVI 2026 (sezione cardine) ══════════ -->
+<section id="incentivi" class="bg-white border-y border-primary/10 scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+    <div class="max-w-3xl mb-14">
+      <p class="font-mono text-[11px] uppercase eyebrow text-accent mb-5 reveal">Sezione cardine</p>
+      <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] mb-5 reveal">Incentivi 2026 per le imprese: la mappa completa (e onesta)</h2>
+      <p class="text-lg text-primary/65 leading-relaxed reveal rd-1">Nel 2026 lo Stato co-finanzia l'indipendenza energetica delle imprese con più strumenti. Sono reali, sono importanti — e <strong class="text-primary font-semibold">non sono tutti uguali, né tutti cumulabili tra loro</strong>. Ecco il quadro, senza semplificazioni ingannevoli.</p>
+    </div>
+
+    <div class="space-y-5">
+      <!-- ① CONTO TERMICO 3.0 -->
+      <article class="rounded-xl border-2 border-primary/15 bg-secondary overflow-hidden reveal">
+        <div class="bg-primary text-white px-6 sm:px-8 py-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span class="font-mono text-2xl text-yellow leading-none">①</span>
+          <h3 class="font-bold text-lg sm:text-xl">Conto Termico 3.0</h3>
+          <span class="ml-auto font-mono text-sm bg-yellow text-primary font-bold px-3 py-1 rounded">Fondo perduto GSE fino al 65%</span>
+        </div>
+        <div class="px-6 sm:px-8 py-7 space-y-4 text-[15px] text-primary/70 leading-relaxed">
+          <p><strong class="text-primary font-semibold">Non è una detrazione: è un rimborso diretto</strong> che il GSE versa sul conto dell'azienda tramite bonifico — in un'unica soluzione fino a 15.000 €, in rate annuali per importi superiori.</p>
+          <p>Per le imprese copre fino al 65% delle spese ammissibili dell'<strong class="text-primary font-semibold">intervento integrato</strong>: sostituzione dell'impianto termico con pompa di calore elettrica su edifici non residenziali esistenti, con la possibilità di includere nello stesso intervento fotovoltaico, accumulo e colonnine di ricarica.</p>
+          <div class="bg-yellowsoft border-l-4 border-yellowdark rounded-r-lg px-5 py-4">
+            <p class="text-[15px] text-primary/80 leading-relaxed"><strong class="text-primary font-bold">Attenzione al dettaglio che quasi nessuno ti dice:</strong> il fotovoltaico da solo <strong class="text-primary font-bold">NON</strong> accede a questo contributo. È la combinazione con la pompa di calore ad aprire la porta — ed è per questo che il progetto va costruito bene fin dall'inizio.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ② IPERAMMORTAMENTO -->
+      <article class="rounded-xl border border-primary/12 bg-secondary overflow-hidden reveal rd-1">
+        <div class="bg-accent text-white px-6 sm:px-8 py-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span class="font-mono text-2xl text-yellow leading-none">②</span>
+          <h3 class="font-bold text-lg sm:text-xl">Iperammortamento 2026 <span class="font-medium text-white/60 text-base">(il nuovo Piano Transizione 5.0)</span></h3>
+          <span class="ml-auto font-mono text-sm border border-white/25 text-white/90 px-3 py-1 rounded">Deduci più di quanto hai speso</span>
+        </div>
+        <div class="px-6 sm:px-8 py-7 space-y-4 text-[15px] text-primary/70 leading-relaxed">
+          <p>Con la <strong class="text-primary font-semibold">Legge di Bilancio 2026</strong>, il vecchio credito d'imposta Transizione 5.0 è diventato iperammortamento: per gli investimenti effettuati <strong class="text-primary font-semibold">dal 1° gennaio 2026 al 30 settembre 2028</strong>, l'azienda porta in ammortamento un costo maggiorato rispetto a quello reale — con maggiorazione <strong class="text-primary font-semibold">fino al 180%</strong> per la generalità degli investimenti agevolabili, e aliquote ulteriormente potenziate per i progetti che certificano una riduzione dei consumi energetici.</p>
+          <p><strong class="text-primary font-semibold">Tradotto:</strong> meno imponibile IRES/IRPEF per anni.</p>
+          <p class="text-sm text-primary/60 border-l-2 border-primary/20 pl-4"><strong class="text-primary/80 font-semibold">Requisito da non sottovalutare:</strong> per i moduli fotovoltaici l'agevolazione richiede caratteristiche tecniche precise (produzione UE, alta efficienza) — un motivo in più per scegliere componenti giusti fin dal preventivo.</p>
+        </div>
+      </article>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- ③ IVA -->
+        <article class="rounded-xl border border-primary/12 bg-secondary p-6 sm:p-7 reveal rd-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-2xl text-accent leading-none">③</span>
+            <h3 class="font-bold text-lg">IVA agevolata al 10%</h3>
+          </div>
+          <p class="text-[15px] text-primary/70 leading-relaxed">Per impianti <strong class="text-primary font-semibold">fino a 200 kW installati su edifici esistenti</strong>, l'IVA scende dal 22% al 10%: su un investimento industriale tipico sono migliaia di euro che restano in azienda. Molti preventivi non lo evidenziano nemmeno.</p>
+        </article>
+        <!-- ④ FINANZA AGEVOLATA -->
+        <article class="rounded-xl border border-primary/12 bg-secondary p-6 sm:p-7 reveal rd-3">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-2xl text-accent leading-none">④</span>
+            <h3 class="font-bold text-lg">Finanza agevolata</h3>
+          </div>
+          <p class="text-[15px] text-primary/70 leading-relaxed"><strong class="text-primary font-semibold">Nuova Sabatini</strong> per le PMI (contributo sugli interessi del finanziamento, anche in leasing) e <strong class="text-primary font-semibold">bandi regionali lombardi</strong> periodici: strumenti che possono affiancare l'operazione sul fronte finanziario.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- TABELLA COMPARATIVA -->
+    <div class="mt-12 reveal">
+      <p class="font-mono text-[11px] uppercase eyebrow text-primary/50 mb-4">Il quadro a colpo d'occhio</p>
+      <div class="overflow-x-auto rounded-xl border border-primary/12">
+        <table class="w-full min-w-[720px] text-sm text-left">
+          <thead class="bg-accent text-white">
+            <tr>
+              <th class="px-5 py-4 font-semibold">Strumento</th>
+              <th class="px-5 py-4 font-semibold">Che cos'è</th>
+              <th class="px-5 py-4 font-semibold">Quanto vale</th>
+              <th class="px-5 py-4 font-semibold">Condizione chiave</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-primary/10 bg-white text-primary/70 align-top">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-primary">Conto Termico 3.0</td>
+              <td class="px-5 py-4">Contributo a fondo perduto, bonifico diretto GSE</td>
+              <td class="px-5 py-4 font-semibold text-primary">Fino al 65% delle spese ammissibili (imprese)</td>
+              <td class="px-5 py-4">Intervento integrato: pompa di calore + eventuale FV/accumulo, edifici non residenziali esistenti</td>
+            </tr>
+            <tr class="bg-secondary/60">
+              <td class="px-5 py-4 font-semibold text-primary">Iperammortamento 2026</td>
+              <td class="px-5 py-4">Maggiorazione del costo deducibile (IRES/IRPEF)</td>
+              <td class="px-5 py-4 font-semibold text-primary">Maggiorazione fino al 180%, potenziata per progetti con risparmio energetico certificato</td>
+              <td class="px-5 py-4">Investimenti 1/1/2026 – 30/9/2028; requisiti tecnici sui componenti</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-primary">IVA agevolata</td>
+              <td class="px-5 py-4">Aliquota ridotta sull'acquisto</td>
+              <td class="px-5 py-4 font-semibold text-primary">10% invece di 22%</td>
+              <td class="px-5 py-4">Impianti fino a 200 kW su edifici esistenti</td>
+            </tr>
+            <tr class="bg-secondary/60">
+              <td class="px-5 py-4 font-semibold text-primary">Nuova Sabatini / bandi</td>
+              <td class="px-5 py-4">Finanza agevolata</td>
+              <td class="px-5 py-4 font-semibold text-primary">Contributo in conto interessi / variabile per bando</td>
+              <td class="px-5 py-4">PMI; disponibilità delle finestre di bando</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BLOCCO CHIUSURA + CTA -->
+    <div class="mt-12 bg-accent text-white rounded-2xl p-7 sm:p-10 relative overflow-hidden reveal">
+      <div class="absolute inset-0 grid-lines"></div>
+      <div class="relative max-w-3xl">
+        <p class="font-mono text-[11px] uppercase eyebrow text-yellow mb-5">La parte che nessuna pagina ti dice</p>
+        <p class="text-lg sm:text-xl font-bold leading-snug mb-5">Questi strumenti NON sono liberamente sommabili.</p>
+        <p class="text-[15px] text-white/70 leading-relaxed mb-4">Il Conto Termico non è cumulabile con altre agevolazioni statali sulle stesse spese; iperammortamento e contributo GSE seguono logiche, spese e vincoli diversi. La combinazione giusta dipende dal tuo edificio, dai tuoi consumi, dal tuo imponibile e dai tuoi piani di investimento.</p>
+        <p class="text-[15px] text-white/90 font-semibold leading-relaxed mb-6">Non esiste la risposta giusta in astratto: esiste la risposta giusta per la tua azienda.</p>
+        <p class="text-[15px] text-white/70 leading-relaxed mb-8">Ed è esattamente il lavoro del nostro esperto: analizzare il tuo caso e costruire, insieme al tuo commercialista, la configurazione che massimizza il beneficio. <strong class="text-white">Gratis, prima di qualunque impegno.</strong></p>
+        <a href="#consulenza" class="group inline-flex items-center gap-3 bg-yellow text-primary font-bold text-sm sm:text-base px-7 py-4 rounded-md hover:bg-yellowdark hover:-translate-y-0.5 transition-transform duration-200">
+          Parla con un esperto di impianti fotovoltaici industriali
+          <span class="transition-transform group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 6 — GARANZIA 30 GIORNI ══════════ -->
+<section class="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+  <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+    <div class="lg:col-span-4">
+      <div class="bg-accent text-white rounded-2xl p-8 text-center reveal">
+        <p class="font-mono text-[10px] uppercase eyebrow text-white/70 mb-3">Garanzia contrattuale</p>
+        <p class="font-mono text-6xl font-bold text-yellow leading-none">30</p>
+        <p class="text-lg font-bold mt-2">giorni</p>
+        <div class="h-px bg-white/15 my-5"></div>
+        <p class="text-sm text-white/65 leading-relaxed">Installazione entro 30 giorni dalla data concordata, scritta nel contratto. Cantiere pianificato sui tuoi turni.</p>
+      </div>
+    </div>
+    <div class="lg:col-span-8">
+      <h2 class="text-3xl md:text-[2.6rem] font-extrabold tracking-tight leading-[1.12] mb-7 reveal">30 giorni. Per iscritto.<br>Senza fermare la produzione.</h2>
+      <div class="space-y-5 text-[15px] md:text-base text-primary/70 leading-relaxed">
+        <p class="reveal rd-1">Nel fotovoltaico industriale il vero costo nascosto non è nel preventivo: è nei mesi di ritardo, nei cantieri che si trascinano, nelle pratiche GSE respinte per un documento sbagliato.</p>
+        <p class="reveal rd-1">Noi lavoriamo al contrario: <strong class="text-primary font-semibold">prima organizziamo, poi firmiamo.</strong> Per questo mettiamo nel contratto l'installazione entro 30 giorni dalla data concordata — e pianifichiamo il cantiere intorno ai tuoi turni, non ai nostri comodi.</p>
+        <p class="reveal rd-2">E dopo la firma non ti passiamo di mano in mano: <strong class="text-primary font-semibold">un solo referente</strong> segue analisi, progetto, pratiche GSE, installazione, collaudo e il dossier completo per il tuo commercialista.</p>
+      </div>
+      <p class="mt-8 text-lg md:text-xl font-bold leading-snug border-l-2 border-accent pl-6 reveal rd-3">Se un fornitore non è disposto a metterti i tempi nero su bianco, la domanda da fargli è: <span class="text-accent">perché?</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 7 — COME FUNZIONA (4 PASSI) ══════════ -->
+<section class="bg-white border-y border-primary/10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+    <p class="font-mono text-[11px] uppercase eyebrow text-primary/50 mb-5 reveal">Il percorso</p>
+    <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] max-w-3xl mb-14 reveal">Dalla prima chiamata all'impianto in produzione: 4 passi, un solo referente</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+      <div class="bg-secondary rounded-xl border border-primary/10 border-t-4 border-t-accent p-7 reveal">
+        <p class="font-mono text-4xl font-bold text-accent leading-none mb-5">01</p>
+        <h3 class="font-bold text-[15px] uppercase eyebrow mb-3 leading-snug">Analisi energetica gratuita</h3>
+        <p class="text-sm text-primary/65 leading-relaxed">L'esperto analizza consumi, potenza impegnata, profilo di carico e copertura. Ti dice con onestà quanto rende l'investimento nel tuo caso — e se non rende, te lo diciamo.</p>
+      </div>
+      <div class="bg-secondary rounded-xl border border-primary/10 border-t-4 border-t-accent p-7 reveal rd-1">
+        <p class="font-mono text-4xl font-bold text-accent leading-none mb-5">02</p>
+        <h3 class="font-bold text-[15px] uppercase eyebrow mb-3 leading-snug">Studio incentivi su misura</h3>
+        <p class="text-sm text-primary/65 leading-relaxed">Costruiamo la configurazione ottimale tra Conto Termico 3.0, iperammortamento e strumenti finanziari, e la validiamo insieme al tuo commercialista.</p>
+      </div>
+      <div class="bg-secondary rounded-xl border border-primary/10 border-t-4 border-t-accent p-7 reveal rd-2">
+        <p class="font-mono text-4xl font-bold text-accent leading-none mb-5">03</p>
+        <h3 class="font-bold text-[15px] uppercase eyebrow mb-3 leading-snug">Progetto e pratiche</h3>
+        <p class="text-sm text-primary/65 leading-relaxed">Progettazione, iter autorizzativo, connessione e domanda GSE: tutto gestito da noi, con aggiornamenti a ogni passaggio.</p>
+      </div>
+      <div class="bg-secondary rounded-xl border border-primary/10 border-t-4 border-t-accent p-7 reveal rd-3">
+        <p class="font-mono text-4xl font-bold text-accent leading-none mb-5">04</p>
+        <h3 class="font-bold text-[15px] uppercase eyebrow mb-3 leading-snug">Installazione in 30 giorni</h3>
+        <p class="text-sm text-primary/65 leading-relaxed">Cantiere pianificato sui tuoi turni, impianto collaudato, monitoraggio attivo e dossier documentale completo consegnato in azienda.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center reveal">
+      <a href="#consulenza" class="group inline-flex items-center gap-3 bg-yellow text-primary font-bold text-sm sm:text-base px-7 py-4 rounded-md hover:bg-yellowdark transition-colors duration-200">
+        Inizia dal passo 1: parla con un esperto
+        <span class="transition-transform group-hover:translate-x-1">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 8 — IL BUSINESS CASE (SIMULAZIONE) ══════════ -->
+<section class="max-w-5xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+  <p class="font-mono text-[11px] uppercase eyebrow text-primary/50 mb-5 reveal">Ordine di grandezza</p>
+  <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] mb-4 reveal">Un esempio concreto di dimensionamento tipo</h2>
+  <p class="text-primary/60 leading-relaxed max-w-2xl mb-10 reveal rd-1">PMI manifatturiera in Brianza · capannone di <strong class="text-primary/80">[X]</strong> m² · impianto fotovoltaico 100 kWp con accumulo, nell'ambito di intervento integrato con pompa di calore.</p>
+
+  <div class="bg-white rounded-2xl border border-primary/12 overflow-hidden reveal rd-2">
+    <div class="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
+      <div class="p-7 sm:p-8">
+        <p class="font-mono text-[10px] uppercase eyebrow text-primary/45 mb-3">Oggi</p>
+        <p class="font-mono text-3xl sm:text-4xl font-bold text-primary/70 leading-none">~[45.000] €</p>
+        <p class="text-sm text-primary/55 mt-3 leading-snug">spesa energetica annua attuale (luce + gas)</p>
+      </div>
+      <div class="p-7 sm:p-8 bg-accent text-white">
+        <p class="font-mono text-[10px] uppercase eyebrow text-white/60 mb-3">Dopo l'intervento</p>
+        <p class="font-mono text-3xl sm:text-4xl font-bold text-white leading-none">~[18.000] €</p>
+        <p class="text-sm text-white/80 mt-3 leading-snug">spesa residua stimata → riduzione dei costi energetici <strong class="text-yellow font-bold">~[60]%</strong></p>
+      </div>
+    </div>
+    <div class="border-t border-primary/10 p-7 sm:p-8 grid sm:grid-cols-2 gap-7">
+      <div>
+        <p class="font-mono text-[10px] uppercase eyebrow text-primary/45 mb-3">Tempo di rientro indicativo</p>
+        <p class="font-mono text-3xl sm:text-4xl font-bold text-accent leading-none">[4–6] anni</p>
+        <p class="text-sm text-primary/55 mt-3 leading-snug">investimento al netto degli incentivi applicabili (contributo GSE sull'intervento integrato + benefici fiscali)</p>
+      </div>
+      <div>
+        <p class="font-mono text-[10px] uppercase eyebrow text-primary/45 mb-3">Vita utile impianto</p>
+        <p class="font-mono text-3xl sm:text-4xl font-bold text-primary leading-none">25+ anni</p>
+        <p class="text-sm text-primary/55 mt-3 leading-snug">Dal rientro in poi, l'energia autoprodotta è margine che torna in azienda, ogni anno, per vent'anni.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 bg-yellowsoft border-l-4 border-yellowdark rounded-r-lg px-6 py-5 reveal rd-3">
+    <p class="text-sm text-primary/75 leading-relaxed"><strong class="text-primary font-bold">⚠ Simulazione a scopo puramente illustrativo.</strong> I valori effettivi dipendono da consumi, profilo di carico, dimensionamento, configurazione incentivante applicabile e situazione fiscale dell'azienda. Il business case della <strong class="text-primary font-bold">TUA</strong> azienda lo costruiamo con numeri veri, gratis, in consulenza.</p>
+  </div>
+
+  <div class="mt-8 reveal">
+    <a href="#consulenza" class="group inline-flex items-center gap-3 bg-yellow text-primary font-bold text-sm sm:text-base px-7 py-4 rounded-md hover:bg-yellowdark transition-colors duration-200">
+      Richiedi il tuo business case personalizzato
+      <span class="transition-transform group-hover:translate-x-1">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ NUMERI AGGREGATI (fallback previsto dal documento in assenza di case study pubblicabili) ══════════ -->
+<section class="bg-accent text-white">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-12 md:py-14">
+    <p class="font-mono text-[11px] uppercase eyebrow text-white/60 mb-8 text-center reveal">Brokery Solar per le imprese del territorio</p>
+    <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/20 reveal rd-1">
+      <div class="py-5 sm:py-0 px-6 text-center">
+        <p class="font-mono text-4xl font-bold text-yellow leading-none">[X] kWp</p>
+        <p class="text-sm text-white/75 mt-3 leading-snug">installati per le imprese del territorio</p>
+      </div>
+      <div class="py-5 sm:py-0 px-6 text-center">
+        <p class="font-mono text-4xl font-bold text-yellow leading-none">[X]</p>
+        <p class="text-sm text-white/75 mt-3 leading-snug">pratiche GSE gestite</p>
+      </div>
+      <div class="py-5 sm:py-0 px-6 text-center">
+        <p class="font-mono text-4xl font-bold text-yellow leading-none">[X]</p>
+        <p class="text-sm text-white/75 mt-3 leading-snug">aziende servite in Brianza e Nord Milano</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 10 — CHI SIAMO ══════════ -->
+<section class="bg-deep text-white relative overflow-hidden">
+  <div class="absolute inset-0 grid-lines"></div>
+  <div class="relative max-w-4xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+    <p class="font-mono text-[11px] uppercase eyebrow text-light mb-5 reveal">Chi siamo</p>
+    <h2 class="text-3xl md:text-[2.7rem] font-extrabold tracking-tight leading-[1.12] mb-8 reveal">Un partner con una struttura alle spalle, non un preventificio</h2>
+    <div class="space-y-5 text-[15px] md:text-base text-white/70 leading-relaxed max-w-3xl">
+      <p class="reveal rd-1">Brokery Solar è la divisione fotovoltaico ed efficienza energetica di <strong class="text-white font-semibold">Gruppo Brokery</strong>, realtà del territorio con <strong class="text-white font-semibold">[anni]</strong> anni di storia e <strong class="text-white font-semibold">[numero]</strong> clienti seguiti tra Brianza e Nord Milano.</p>
+      <p class="reveal rd-2">Per un'azienda questo significa tre cose concrete: interlocutori che ci sono anche dopo il collaudo, quando servono monitoraggio e assistenza; solidità per garantire per contratto ciò che promettiamo; e la libertà di dirti la verità sull'investimento, <strong class="text-white font-semibold">anche quando la verità è «non conviene»</strong> — perché la nostra reputazione sul territorio vale più di una singola commessa.</p>
+      <p class="reveal rd-3">Siamo nati per alzare gli standard di un settore che ha promesso troppo e mantenuto poco. Questa pagina, con i suoi «fino a» e i suoi disclaimer, è già il nostro biglietto da visita: <strong class="text-yellow font-semibold">diciamo le cose come stanno.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 11 — FAQ BUSINESS ══════════ -->
+<section class="bg-white border-b border-primary/10">
+  <div class="max-w-3xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+    <p class="font-mono text-[11px] uppercase eyebrow text-primary/50 mb-5 reveal">FAQ</p>
+    <h2 class="text-3xl md:text-[2.5rem] font-extrabold tracking-tight leading-[1.14] mb-10 reveal">Le domande che ci fanno i titolari (e le risposte senza giri di parole)</h2>
+
+    <div x-data="{ open: 0 }" class="border-t border-primary/12">
+      <template x-for="(item, i) in [
+        {q:'Il contributo del 65% vale anche se faccio solo il fotovoltaico?', a:'No, e chi ti dice il contrario ti sta ingannando. Il contributo a fondo perduto GSE fino al 65% riguarda l\'intervento integrato con sostituzione dell\'impianto termico con pompa di calore: è in quel quadro che anche fotovoltaico e accumulo diventano incentivabili. Se fai solo fotovoltaico, gli strumenti giusti sono altri (iperammortamento, IVA 10%, finanza agevolata): in consulenza vediamo cosa si applica al tuo caso.'},
+        {q:'L\'installazione ferma la produzione?', a:'No: pianifichiamo il cantiere intorno ai tuoi turni e alle tue stagionalità. La quasi totalità delle lavorazioni avviene in copertura, senza interferire con l\'attività.'},
+        {q:'Chi gestisce le pratiche GSE e la documentazione fiscale?', a:'Noi, integralmente: domanda GSE, iter di connessione, documentazione tecnica e dossier completo per il tuo commercialista. Tu firmi, noi facciamo.'},
+        {q:'Il mio tetto è vecchio (o in amianto): posso installare?', a:'Lo verifichiamo al sopralluogo. Se serve un rifacimento o una bonifica, lo integriamo nel progetto: spesso è l\'occasione per sistemare la copertura una volta per tutte, dentro un unico intervento coordinato.'},
+        {q:'Posso finanziare o fare leasing invece di immobilizzare liquidità?', a:'Sì: l\'investimento può essere strutturato con finanziamento o leasing, e strumenti come la Nuova Sabatini possono abbattere il costo del capitale per le PMI. Il piano finanziario fa parte del business case che costruiamo insieme.'},
+        {q:'Quanto durano davvero questi incentivi?', a:'L\'iperammortamento copre gli investimenti fino al 30 settembre 2028, ma il Conto Termico opera con risorse annuali limitate — e nel 2026 il portale GSE è già stato sospeso una volta per eccesso di domande. Tradotto: chi arriva prima, prende; chi aspetta, spera.'},
+        {q:'E se l\'immobile è in affitto o della mia immobiliare?', a:'Sono situazioni frequenti e gestibili: la struttura corretta (chi investe, chi beneficia degli incentivi) dipende dal singolo caso e la definiamo in consulenza con il tuo commercialista.'},
+        {q:'La consulenza mi impegna a qualcosa?', a:'No. Analisi energetica e studio degli incentivi sono gratuiti e senza impegno. Esci dalla consulenza con numeri veri sulla tua azienda: poi decidi tu.'}
+      ]" :key="i">
+        <div class="border-b border-primary/12">
+          <button @click="open = open === i ? -1 : i" class="w-full flex items-start justify-between gap-5 py-5 text-left group">
+            <span class="flex gap-4">
+              <span class="font-mono text-xs text-accent pt-1 shrink-0" x-text="String(i+1).padStart(2,'0')"></span>
+              <span class="font-semibold text-[15px] leading-snug group-hover:text-accent transition-colors" x-text="item.q"></span>
+            </span>
+            <span class="font-mono text-xl shrink-0 text-accent transition-transform duration-200" :class="open === i ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="open === i" x-collapse class="pb-6 pl-10 pr-4 text-primary/65 text-[15px] leading-relaxed">
+            <span x-text="item.a"></span>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <div class="mt-10 text-center reveal">
+      <a href="#consulenza" class="group inline-flex items-center gap-3 bg-yellow text-primary font-bold text-sm sm:text-base px-7 py-4 rounded-md hover:bg-yellowdark transition-colors duration-200">
+        Ho le idee chiare: parla con un esperto
+        <span class="transition-transform group-hover:translate-x-1">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 12 — FORM MULTI-STEP B2B ══════════ -->
+<section id="consulenza" class="bg-accent text-white scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-24 grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+    <div class="lg:col-span-5">
+      <h2 class="text-3xl md:text-[2.4rem] font-extrabold tracking-tight leading-[1.12] mb-5 reveal">Parla con un esperto di impianti fotovoltaici industriali</h2>
+      <p class="text-lg text-white/70 leading-relaxed mb-8 reveal rd-1">30 secondi per compilare, 24 ore lavorative per essere ricontattato. Nessun impegno.</p>
+      <div class="space-y-3.5 text-sm text-white/70 reveal rd-2">
+        <p class="flex gap-3"><span class="text-yellow font-mono shrink-0">✓</span>Analisi energetica su consumi, potenza impegnata e copertura</p>
+        <p class="flex gap-3"><span class="text-yellow font-mono shrink-0">✓</span>Studio degli incentivi applicabili al tuo caso specifico</p>
+        <p class="flex gap-3"><span class="text-yellow font-mono shrink-0">✓</span>Business case con numeri veri, da validare col tuo commercialista</p>
+        <p class="flex gap-3"><span class="text-yellow font-mono shrink-0">✓</span>Gratis e senza impegno: poi decidi tu</p>
+      </div>
+      <p class="flex gap-3 items-start text-xs text-white/45 leading-relaxed mt-8 pt-6 border-t border-white/12 reveal rd-3">
+        <span class="shrink-0">🔒</span>
+        I tuoi dati restano riservati: li usiamo solo per ricontattarti. Niente spam, niente cessioni a terzi.
+      </p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <!--
+        ════════ INTEGRAZIONE GOHIGHLEVEL ════════
+        Sostituire il blocco <div id="form-nativo"> qui sotto con l'embed GHL:
+
+        <iframe src="https://api.leadconnectorhq.com/widget/form/XXXXXXXX"
+                style="width:100%;height:640px;border:none;border-radius:12px;background:#fff"
+                id="inline-XXXXXXXX" data-layout="{'id':'INLINE'}" data-form-name="Lead Solar B2B"></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+        Configurazione richiesta lato GHL:
+        · Form multi-step, 3 step (vedi struttura replicata sotto)
+        · Tag automatici: tipo-immobile / fascia-spesa / proprieta
+        · Pipeline «Lead Solar B2B» (separata dalla B2C)
+        · Routing: fascia-spesa «Oltre 100.000 €» → notifica diretta Direttore Efficienza/Solar
+                   fasce inferiori → coda call center
+        · Checkbox privacy GDPR obbligatoria, NON pre-spuntata; consenso marketing separato e facoltativo
+        · On submit → Redirect URL: /grazie.html
+      -->
+      <div id="form-nativo" x-data="{
+            step: 1,
+            data: { immobile:'', spesa:'', proprieta:'', nome:'', azienda:'', telefono:'', comune:'', privacy:false },
+            get canNext() {
+              if (this.step === 1) return !!this.data.immobile;
+              if (this.step === 2) return !!this.data.spesa && !!this.data.proprieta;
+              return true;
+            },
+            get canSubmit() {
+              return this.data.nome && this.data.azienda && this.data.telefono && this.data.comune && this.data.privacy;
+            }
+          }" class="bg-white text-primary rounded-2xl shadow-2xl shadow-black/25 p-6 sm:p-8">
+
+        <!-- progress -->
+        <div class="flex items-center gap-3 mb-7">
+          <template x-for="n in 3" :key="n">
+            <div class="flex-1">
+              <div class="h-1.5 rounded-full transition-colors duration-300" :class="step >= n ? 'bg-accent' : 'bg-primary/12'"></div>
+            </div>
+          </template>
+          <span class="font-mono text-[11px] text-primary/45 shrink-0 ml-1">Step <span x-text="step"></span> di 3</span>
+        </div>
+
+        <form action="/b2b/grazie.html" method="get" @submit="if(!canSubmit) $event.preventDefault()">
+
+          <!-- STEP 1 -->
+          <div x-show="step === 1">
+            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">La tua azienda</p>
+            <p class="font-bold text-lg mb-5 leading-snug">Su quale immobile stai valutando l'intervento?</p>
+            <div class="space-y-2.5">
+              <template x-for="opt in ['Capannone / opificio','Ufficio / sede direzionale','Negozio / struttura commerciale','Altro edificio aziendale']" :key="opt">
+                <label class="flex items-center gap-3 border rounded-lg px-4 py-3.5 cursor-pointer transition-colors"
+                       :class="data.immobile === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
+                  <input type="radio" name="immobile" :value="opt" x-model="data.immobile" class="accent-accent w-4 h-4 shrink-0">
+                  <span class="text-sm font-medium" x-text="opt"></span>
+                </label>
+              </template>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div x-show="step === 2" x-cloak>
+            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">Per preparare la consulenza</p>
+            <p class="font-bold text-[17px] mb-4 leading-snug">Indicativamente, quanto spende la tua azienda di energia all'anno (luce + gas)?</p>
+            <div class="space-y-2.5 mb-7">
+              <template x-for="opt in ['Meno di 10.000 €','10.000 – 30.000 €','30.000 – 100.000 €','Oltre 100.000 €']" :key="opt">
+                <label class="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer transition-colors"
+                       :class="data.spesa === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
+                  <input type="radio" name="spesa" :value="opt" x-model="data.spesa" class="accent-accent w-4 h-4 shrink-0">
+                  <span class="text-sm font-medium" x-text="opt"></span>
+                </label>
+              </template>
+            </div>
+            <p class="font-bold text-[17px] mb-4 leading-snug">L'immobile è di proprietà (dell'azienda o della famiglia)?</p>
+            <div class="space-y-2.5">
+              <template x-for="opt in ['Sì','No, in affitto','Situazione mista']" :key="opt">
+                <label class="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer transition-colors"
+                       :class="data.proprieta === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
+                  <input type="radio" name="proprieta" :value="opt" x-model="data.proprieta" class="accent-accent w-4 h-4 shrink-0">
+                  <span class="text-sm font-medium" x-text="opt"></span>
+                </label>
+              </template>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div x-show="step === 3" x-cloak>
+            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">Dove ti ricontattiamo</p>
+            <p class="font-bold text-lg mb-5 leading-snug">Ultimi dati e ti richiamiamo entro 24 ore lavorative</p>
+            <div class="grid sm:grid-cols-2 gap-3.5">
+              <input type="text" name="nome" x-model="data.nome" placeholder="Nome e cognome" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
+              <input type="text" name="azienda" x-model="data.azienda" placeholder="Azienda" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
+              <input type="tel" name="telefono" x-model="data.telefono" placeholder="Telefono" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
+              <input type="text" name="comune" x-model="data.comune" placeholder="Comune" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
+            </div>
+            <label class="flex gap-3 items-start mt-5 cursor-pointer">
+              <input type="checkbox" name="privacy" x-model="data.privacy" required class="accent-accent w-4 h-4 mt-0.5 shrink-0">
+              <span class="text-xs text-primary/60 leading-relaxed">Ho letto e accetto l'<a href="#" class="underline hover:text-accent">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *</span>
+            </label>
+          </div>
+
+          <!-- navigazione -->
+          <div class="flex items-center gap-3 mt-7 pt-6 border-t border-primary/10">
+            <button type="button" x-show="step > 1" x-cloak @click="step--" class="text-sm font-semibold text-primary/55 hover:text-primary px-4 py-3.5 transition-colors">← Indietro</button>
+            <button type="button" x-show="step < 3" @click="if(canNext) step++" :disabled="!canNext"
+                    class="flex-1 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-lg transition-all disabled:opacity-35 disabled:cursor-not-allowed hover:bg-ink">
+              Continua →
+            </button>
+            <button type="submit" x-show="step === 3" x-cloak :disabled="!canSubmit"
+                    class="flex-1 bg-yellow text-primary font-bold text-sm px-6 py-3.5 rounded-lg transition-all disabled:opacity-35 disabled:cursor-not-allowed hover:bg-yellowdark">
+              Prenota la consulenza con l'esperto
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEZIONE 13 — FOOTER E DISCLAIMER ══════════ -->
+<footer class="bg-deep text-white/45">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 py-14">
+    <div class="flex flex-col md:flex-row justify-between gap-8 pb-9 border-b border-white/10">
+      <div>
+        <img src="https://fhpqhasmxdruhilvzxoz.supabase.co/storage/v1/object/sign/assets/brand-kit/083307f4-56aa-4b7d-9e35-a95d1d0096d8/41c612c8-f0d2-4a57-a884-0b852527024f.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83MjYwNDAzYS05MDI1LTQzNGYtOWFkMS1jMjMxOGUyYzE2MjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvYnJhbmQta2l0LzA4MzMwN2Y0LTU2YWEtNGI3ZC05ZTM1LWE5NWQxZDAwOTZkOC80MWM2MTJjOC1mMGQyLTRhNTctYTg4NC0wYjg1MjUyNzAyNGYucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MzUxNzc4MSwiZXhwIjoyMDk4ODc3NzgxfQ.L-1uo-NPCgtbecfbku4xPImH9zXEU9IDaZ54npGHA7U" alt="Brokery Solar" class="h-7 w-auto mb-3 opacity-90">
+        <p class="text-xs leading-relaxed max-w-md">Brokery Solar — divisione fotovoltaico ed efficienza energetica di Gruppo Brokery<br>[Ragione sociale, P.IVA, indirizzo sede]</p>
+      </div>
+      <div class="text-xs md:text-right leading-relaxed">
+        <p>[Telefono]</p>
+        <p>[Email]</p>
+        <p class="mt-3">© 2026 · <a href="#" class="hover:text-white transition-colors underline-offset-2 hover:underline">Privacy Policy</a> · <a href="#" class="hover:text-white transition-colors underline-offset-2 hover:underline">Cookie Policy</a></p>
+      </div>
+    </div>
+    <p class="text-[11px] leading-relaxed text-white/35 mt-8 max-w-4xl">
+      Le informazioni su incentivi e agevolazioni (Conto Termico 3.0, iperammortamento 2026, IVA agevolata, strumenti di finanza agevolata) si riferiscono alla normativa vigente alla data di pubblicazione e sono soggette a requisiti, massimali, disponibilità di risorse e regole di cumulabilità definiti dalle norme e dagli enti competenti (GSE, MIMIT, Agenzia delle Entrate). L'effettiva applicabilità va verificata caso per caso con il supporto dei propri consulenti. Il contributo del Conto Termico 3.0 fino al 65% delle spese ammissibili si riferisce all'intervento integrato comprensivo della sostituzione dell'impianto termico con pompa di calore elettrica su edifici non residenziali. Tutte le simulazioni presenti in questa pagina hanno scopo puramente illustrativo.
+    </p>
+  </div>
+</footer>
+
+<!-- CTA STICKY MOBILE -->
+<div class="sm:hidden fixed bottom-0 inset-x-0 z-40 p-3 bg-secondary/95 backdrop-blur border-t border-primary/15">
+  <a href="#consulenza" class="block bg-yellow text-primary text-center font-bold text-sm px-5 py-3.5 rounded-lg">Parla con un esperto →</a>
+</div>
+<div class="sm:hidden h-20"></div>
+
+</body>
+</html>

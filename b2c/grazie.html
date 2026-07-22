@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Grazie! Richiesta ricevuta | Brokery Solar</title>
+<meta name="description" content="Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta entro 24 ore.">
+<link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
+<link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#3A4159',
+        accent: '#077FBD',
+        light: '#6FC9EB',
+        yellow: '#ffd800',
+        yellowDark: '#ffb103',
+        secondary: '#f8fafc'
+      },
+      fontFamily: { brand: ['Inter', 'Inter', 'sans-serif'] }
+    }
+  }
+}
+</script>
+<style>.hairline { border-color: rgba(248,250,252,0.14); }</style>
+</head>
+<body class="relative bg-primary font-brand text-white antialiased min-h-screen flex flex-col">
+
+<!-- SOFT BACKGROUND (fixed layer, does not affect scroll) -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+  <img src="/b2c/assets/img/hero.webp" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-50" decoding="async">
+  <div class="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/70 to-primary/90"></div>
+  <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-light/10 blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-yellow/10 blur-3xl"></div>
+</div>
+
+<!-- HERO / CONFIRMATION -->
+<main class="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
+  <div class="max-w-2xl w-full text-center">
+    <span class="inline-flex items-center bg-white rounded-xl px-4 py-3 shadow-sm mb-12">
+      <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-8 w-auto">
+    </span>
+
+    <div class="mx-auto mb-8 flex items-center justify-center h-20 w-20 rounded-full bg-yellow">
+      <svg class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+    </div>
+
+    <p class="text-xs uppercase tracking-[0.3em] text-light mb-5">Richiesta ricevuta</p>
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6">Grazie, ci siamo.</h1>
+    <p class="text-lg text-white/70 leading-relaxed max-w-xl mx-auto mb-12">
+      Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta <span class="text-white font-semibold">entro 24 ore</span>, bolletta alla mano, per dirti quanto puoi produrre e quanto puoi risparmiare — senza impegno.
+    </p>
+
+    <!-- NEXT STEPS -->
+    <div class="grid sm:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden text-left mb-12">
+      <div class="bg-white/5 backdrop-blur-sm p-6">
+        <p class="text-3xl font-black text-light mb-3">01</p>
+        <h2 class="font-bold text-sm mb-1">Ti ricontattiamo</h2>
+        <p class="text-xs text-white/60 leading-relaxed">Entro 24 ore, per fissare il check-up nei tuoi tempi.</p>
+      </div>
+      <div class="bg-white/5 backdrop-blur-sm p-6">
+        <p class="text-3xl font-black text-light mb-3">02</p>
+        <h2 class="font-bold text-sm mb-1">Check-up gratuito</h2>
+        <p class="text-xs text-white/60 leading-relaxed">Analizziamo tetto, consumi e bolletta: numeri reali, non stime a voce.</p>
+      </div>
+      <div class="bg-white/5 backdrop-blur-sm p-6">
+        <p class="text-3xl font-black text-light mb-3">03</p>
+        <h2 class="font-bold text-sm mb-1">Simulazione su misura</h2>
+        <p class="text-xs text-white/60 leading-relaxed">Risparmio, incentivi e payback sul tuo caso. Se procedi, installiamo in 30 giorni.</p>
+      </div>
+    </div>
+
+    <a href="/b2c/" class="inline-block bg-yellow text-primary font-bold px-10 py-5 text-sm uppercase tracking-[0.1em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Torna al sito</a>
+    <p class="text-xs text-white/50 mt-6">Nel frattempo, tieni a portata la tua ultima bolletta: ci servirà per i conti.</p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="relative z-10 border-t hairline">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/45">
+    <p>Fotovoltaico, accumulo e caldaia ibrida · divisione del Gruppo Brokery</p>
+    <p>info@brokerysolar.it · Nord Italia · Installiamo in 30 giorni</p>
+  </div>
+</footer>
+
+</body>
+</html>
