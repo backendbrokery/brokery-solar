@@ -1,353 +1,513 @@
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brokery Solar | Taglia la bolletta fino all'80%. Installato in 30 giorni, garantito per iscritto</title>
-<meta name="description" content="Fotovoltaico con accumulo: taglia la bolletta fino all'80%. Installazione garantita in 30 giorni per contratto, pratiche burocratiche gestite da noi dalla A alla Z. Sopralluogo e studio di fattibilità gratuiti. Nel 2026 detrazione fino al 50% sull'abitazione principale.">
-<meta property="og:title" content="Brokery Solar | Installato in 30 giorni, garantito per iscritto">
-<meta property="og:description" content="Sopralluogo e studio di fattibilità gratuiti. Pratiche gestite da noi dalla A alla Z. E se prenoti l'intervento nel 2026, puoi ancora accedere alla detrazione fino al 50%.">
-<meta property="og:image" content="/b2c/assets/img/og-image.jpg">
-<link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
-<link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#3A4159',
-        accent: '#077FBD',
-        light: '#6FC9EB',
-        yellow: '#ffd800',
-        yellowDark: '#ffb103',
-        secondary: '#f8fafc'
-      },
-      fontFamily: { brand: ['Inter', 'Inter', 'sans-serif'] }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brokery Solar | Taglia la bolletta fino all'80%. Installato in 30 giorni, garantito per iscritto</title>
+  <meta name="description"
+    content="Fotovoltaico con accumulo: taglia la bolletta fino all'80%. Installazione garantita in 30 giorni per contratto, pratiche burocratiche gestite da noi dalla A alla Z. Sopralluogo e studio di fattibilità gratuiti. Nel 2026 detrazione fino al 50% sull'abitazione principale.">
+  <meta property="og:title" content="Brokery Solar | Installato in 30 giorni, garantito per iscritto">
+  <meta property="og:description"
+    content="Sopralluogo e studio di fattibilità gratuiti. Pratiche gestite da noi dalla A alla Z. E se prenoti l'intervento nel 2026, puoi ancora accedere alla detrazione fino al 50%.">
+  <meta property="og:image" content="/b2c/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
+  <link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3A4159',
+            accent: '#077FBD',
+            light: '#6FC9EB',
+            yellow: '#ffd800',
+            yellowDark: '#ffb103',
+            secondary: '#f8fafc'
+          },
+          fontFamily: { brand: ['Inter', 'Inter', 'sans-serif'] }
+        }
+      }
     }
-  }
-}
-</script>
+  </script>
 </head>
+
 <body class="bg-white font-brand text-gray-900 antialiased">
-<style>
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-[x-cloak] { display: none !important; }
-.hairline { border-color: rgba(255,255,255,0.16); }
-/* Sezioni scure: gradient sull'accent, non il dark piatto */
-.brand-dark { background: linear-gradient(135deg, #077FBD 0%, #0A6B9C 46%, #2E3A55 100%); }
-.brand-dark-overlay { background: linear-gradient(135deg, rgba(7,127,189,0.93) 0%, rgba(10,107,156,0.94) 46%, rgba(46,58,85,0.96) 100%); }
-.brand-hero-overlay { background: linear-gradient(to top, rgba(31,45,68,0.95) 0%, rgba(9,88,133,0.72) 48%, rgba(7,127,189,0.30) 100%); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
-});
-</script>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
 
-<!-- TOP BAR — nessun menu di navigazione: solo logo e telefono cliccabile (checklist compliance #9) -->
-<div class="fixed top-0 inset-x-0 z-50 brand-dark-overlay backdrop-blur-md">
-  <div class="max-w-6xl mx-auto px-5 md:px-6 flex items-center justify-between h-16 md:h-20">
-    <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 shadow-sm">
-      <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 md:h-7 w-auto">
-    </span>
-    <a href="tel:[Telefono]" class="inline-flex items-center gap-2 text-white font-semibold text-sm md:text-base hover:text-light transition-colors duration-200">
-      <svg class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.97.757l1 4a1 1 0 01-.29.98l-1.6 1.6a14 14 0 006.08 6.08l1.6-1.6a1 1 0 01.98-.29l4 1a1 1 0 01.757.97V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
-      <span>[Telefono]</span>
-    </a>
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    [x-cloak] {
+      display: none !important;
+    }
+
+    .hairline {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Sezioni scure: gradient sull'accent, non il dark piatto */
+    .brand-dark {
+      background: linear-gradient(135deg, #077FBD 0%, #0A6B9C 46%, #2E3A55 100%);
+    }
+
+    .brand-dark-overlay {
+      background: linear-gradient(135deg, rgba(7, 127, 189, 0.93) 0%, rgba(10, 107, 156, 0.94) 46%, rgba(46, 58, 85, 0.96) 100%);
+    }
+
+    .brand-hero-overlay {
+      background: linear-gradient(to bottom, rgba(31, 45, 68, 0.92) 0%, rgba(9, 88, 133, 0.60) 50%, rgba(7, 127, 189, 0.12) 100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    });
+  </script>
+
+  <!-- TOP BAR — nessun menu di navigazione: solo logo e telefono cliccabile (checklist compliance #9) -->
+  <div class="fixed top-0 inset-x-0 z-50 brand-dark-overlay backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-5 md:px-6 flex items-center justify-between h-16 md:h-20">
+      <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 shadow-sm">
+        <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 md:h-7 w-auto">
+      </span>
+      <a href="tel:+39800032645"
+        class="flex items-center gap-2 text-sm font-semibold text-white border border-white/40 hover:bg-white hover:text-primary px-3.5 py-2 rounded-full transition-colors">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+        <span class="hidden sm:inline">800 032 645</span>
+        <span class="sm:hidden">Chiama</span>
+      </a>
+    </div>
   </div>
-</div>
 
-<!-- SEZIONE 1 — HERO -->
-<header class="relative min-h-screen flex items-end overflow-hidden brand-dark">
-  <img src="/b2c/assets/img/hero-solar.webp" alt="Impianto fotovoltaico Brokery Solar installato su villetta" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" decoding="async">
-  <div class="absolute inset-0 brand-hero-overlay"></div>
-  <div class="relative max-w-6xl mx-auto px-5 md:px-6 pt-28 md:pt-32 pb-24 md:pb-28 w-full">
-    <p class="text-[11px] md:text-xs uppercase tracking-[0.3em] text-light mb-5 md:mb-6">Fotovoltaico con accumulo</p>
-    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] max-w-4xl text-white">
-      Taglia la bolletta fino all'80% con il fotovoltaico.<br class="hidden md:block"> Installato in 30 giorni, garantito per iscritto.
-    </h1>
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mt-8 md:mt-10">
-      <p class="text-base md:text-lg text-white/75 max-w-xl leading-relaxed">
-        Sopralluogo e studio di fattibilità gratuiti. Pratiche burocratiche gestite da noi, dalla A alla Z. E se prenoti l'intervento nel 2026, puoi ancora accedere alla detrazione fiscale fino al 50%.
-      </p>
-      <div class="shrink-0">
-        <a href="#contatti" class="block md:inline-block text-center bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Richiedi il sopralluogo gratuito</a>
+  <!-- SEZIONE 1 — HERO -->
+  <header class="relative min-h-screen flex items-center overflow-hidden brand-dark">
+    <img src="/b2c/assets/img/hero-solar.webp" alt="Impianto fotovoltaico Brokery Solar installato su villetta"
+      class="absolute inset-0 w-full h-full object-cover object-bottom" fetchpriority="high" decoding="async">
+    <div class="absolute inset-0 brand-hero-overlay"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 pt-28 md:pt-32 pb-20 md:pb-24 w-full">
+      <p class="inline-flex items-center gap-2 bg-yellow/15 border border-yellow/40 text-yellow rounded-full px-3.5 py-1.5 text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] mb-5 md:mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-yellow"></span>Fotovoltaico con accumulo</p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] max-w-4xl text-white">
+        Taglia la bolletta fino all'80% con il fotovoltaico.<br class="hidden md:block"> <span
+          class="text-yellow">Installato in 30 giorni</span>.
+      </h1>
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mt-8 md:mt-10">
+        <p class="text-base md:text-lg text-white/75 max-w-xl leading-relaxed">
+          Sopralluogo e studio di fattibilità gratuiti. Pratiche burocratiche gestite da noi, dalla A alla Z. E se
+          prenoti l'intervento nel 2026, puoi ancora accedere alla detrazione fiscale fino al 50%.
+        </p>
+        <div class="shrink-0">
+          <a href="#contatti"
+            class="block md:inline-block text-center bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Richiedi
+            il sopralluogo gratuito</a>
+        </div>
+      </div>
+      <div
+        class="flex flex-wrap gap-x-7 gap-y-3 mt-10 md:mt-14 pt-6 border-t hairline text-xs md:text-[13px] text-white/70">
+        <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Senza impegno</span>
+        <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Ti richiamiamo entro
+          24 ore</span>
+        <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Nessun costo
+          nascosto</span>
       </div>
     </div>
-    <div class="flex flex-wrap gap-x-7 gap-y-3 mt-10 md:mt-14 pt-6 border-t hairline text-xs md:text-[13px] text-white/70">
-      <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Senza impegno</span>
-      <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Ti richiamiamo entro 24 ore</span>
-      <span class="inline-flex items-center gap-2"><span class="text-yellow font-bold">✓</span> Nessun costo nascosto</span>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!-- SEZIONE 2 — BARRA DI FIDUCIA -->
-<section class="bg-secondary border-b border-gray-200">
-  <div class="max-w-6xl mx-auto px-5 md:px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="flex flex-col items-center text-center gap-2 reveal">
-      <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5M9 11h.01M15 11h.01"/></svg>
-      <p class="text-sm font-semibold leading-snug">Parte di Gruppo Brokery<br><span class="font-normal text-gray-500">10 anni di storia sul territorio</span></p>
-    </div>
-    <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-1">
-      <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      <p class="text-sm font-semibold leading-snug">Installazione garantita<br><span class="font-normal text-gray-500">in 30 giorni</span></p>
-    </div>
-    <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-2">
-      <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-      <p class="text-sm font-semibold leading-snug">Pratiche e burocrazia<br><span class="font-normal text-gray-500">ci pensiamo noi</span></p>
-    </div>
-    <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-3">
-      <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/></svg>
-      <p class="text-sm font-semibold leading-snug">Garanzie scritte<br><span class="font-normal text-gray-500">su prodotti e installazione</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- SEZIONE 3 — IL PROBLEMA (agitazione) -->
-<section class="brand-dark text-white py-20 md:py-28">
-  <div class="max-w-4xl mx-auto px-5 md:px-6">
-    <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8 reveal">Quanto ti costa <span class="text-yellow">NON</span> avere il fotovoltaico?</h2>
-    <p class="text-lg text-white/75 leading-relaxed mb-10 reveal">Ogni anno che passa, una famiglia media versa migliaia di euro al proprio fornitore di energia. Soldi che escono e non tornano. E intanto:</p>
-    <div class="space-y-6">
-      <div class="flex gap-4 reveal">
-        <span class="text-yellow font-black text-xl leading-none pt-1">—</span>
-        <p class="text-white/80 leading-relaxed"><strong class="text-white font-semibold">Le bollette restano imprevedibili:</strong> basta un inverno rigido o una crisi internazionale per vederle salire di nuovo.</p>
+  <!-- SEZIONE 2 — BARRA DI FIDUCIA -->
+  <section class="bg-secondary border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-5 md:px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="flex flex-col items-center text-center gap-2 reveal">
+        <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5M9 11h.01M15 11h.01" />
+        </svg>
+        <p class="text-sm font-semibold leading-snug">Parte di Gruppo Brokery<br><span
+            class="font-normal text-gray-500">10 anni di storia sul territorio</span></p>
       </div>
-      <div class="flex gap-4 reveal reveal-delay-1">
-        <span class="text-yellow font-black text-xl leading-none pt-1">—</span>
-        <p class="text-white/80 leading-relaxed"><strong class="text-white font-semibold">Gli incentivi si riducono:</strong> la detrazione fiscale sull'abitazione principale è fino al 50% nel 2026, ma dal 2027 scende al 36%. Aspettare ha un costo concreto.</p>
+      <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-1">
+        <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-sm font-semibold leading-snug">Installazione<br><span
+            class="font-normal text-gray-500">in 30 giorni</span></p>
       </div>
-      <div class="flex gap-4 reveal reveal-delay-2">
-        <span class="text-yellow font-black text-xl leading-none pt-1">—</span>
-        <p class="text-white/80 leading-relaxed"><strong class="text-white font-semibold">Il tetto di casa tua</strong> resta l'unico spazio che possiedi e che non ti produce nulla.</p>
+      <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-2">
+        <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+        <p class="text-sm font-semibold leading-snug">Pratiche e burocrazia<br><span
+            class="font-normal text-gray-500">ci pensiamo noi</span></p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-3">
+        <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
+        </svg>
+        <p class="text-sm font-semibold leading-snug">Garanzie scritte<br><span class="font-normal text-gray-500">su
+            prodotti e installazione</span></p>
       </div>
     </div>
-    <p class="text-xl md:text-2xl font-bold leading-snug mt-12 pt-10 border-t hairline reveal">La domanda giusta non è «quanto costa un impianto fotovoltaico?».<br class="hidden md:block"> È <span class="text-yellow">«quanto mi costa ogni anno non averlo?»</span></p>
-  </div>
-</section>
+  </section>
 
-<!-- SEZIONE 4 — LA SOLUZIONE: FOTOVOLTAICO + ACCUMULO -->
-<section class="max-w-6xl mx-auto px-5 md:px-6 py-20 md:py-28">
-  <div class="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
-    <div class="md:col-span-6 lg:col-span-5 reveal">
-      <img src="/b2c/assets/img/interventi/intervento-3.webp" alt="Inverter e batterie di accumulo installati da Brokery Solar" class="w-full h-[380px] md:h-[520px] object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async">
+  <!-- SEZIONE 8 — LA FINESTRA FISCALE 2026 -->
+  <section class="brand-dark text-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-5 md:px-6">
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-10 reveal">Il 2026 è l'anno
+        giusto.<br><span class="text-white/50">Il 2027 lo sarà meno.</span></h2>
+      <div class="grid grid-cols-2 gap-5 mb-10">
+        <div class="border-2 border-yellow rounded-2xl p-6 md:p-8 reveal">
+          <p class="text-xs uppercase tracking-[0.2em] text-yellow mb-3">2026</p>
+          <p class="text-4xl md:text-6xl font-black text-yellow mb-2">fino al 50%</p>
+          <p class="text-sm text-white/60">di detrazione IRPEF sull'abitazione principale</p>
+        </div>
+        <div class="border hairline rounded-2xl p-6 md:p-8 reveal reveal-delay-1">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/40 mb-3">Dal 2027</p>
+          <p class="text-4xl md:text-6xl font-black text-white/40 mb-2">36%</p>
+          <p class="text-sm text-white/40">aliquota a cui è destinata a scendere</p>
+        </div>
+      </div>
+      <div class="space-y-5 text-white/75 leading-relaxed">
+        <p class="reveal">Oggi, per gli interventi sull'abitazione principale, puoi detrarre dall'IRPEF fino al 50%
+          della spesa per il tuo impianto fotovoltaico, recuperandola in 10 anni. Dal 1° gennaio 2027, l'aliquota è
+          destinata a scendere al 36%.</p>
+        <p class="reveal reveal-delay-1">Su un impianto residenziale tipo, la differenza tra le due aliquote può valere
+          diverse migliaia di euro di detrazione in meno. <strong class="text-white font-semibold">Non è marketing: è il
+            calendario fiscale.</strong></p>
+        <p class="reveal reveal-delay-2">Considera anche i tempi tecnici: sopralluogo, progetto, pratiche e
+          installazione richiedono settimane. Chi vuole chiudere con le regole del 2026 deve muoversi ora, non a
+          dicembre.</p>
+      </div>
+      <div class="mt-12 reveal">
+        <a href="#contatti"
+          class="block md:inline-block text-center bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Blocca
+          le condizioni 2026: richiedi il sopralluogo</a>
+      </div>
     </div>
-    <div class="md:col-span-6 lg:col-span-7 reveal reveal-delay-1">
-      <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">La soluzione</p>
-      <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-5">Il tuo impianto su misura: fotovoltaico + batteria di accumulo</h2>
-      <p class="text-gray-600 leading-relaxed mb-8">Un impianto fotovoltaico da solo produce energia quando c'è il sole. Con la batteria di accumulo, la usi anche la sera e la notte: è così che il risparmio in bolletta diventa davvero importante.</p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex gap-4 items-start">
-          <span class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">☀</span>
-          <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">PRODUCI</strong> la tua energia direttamente dal tetto di casa</p>
-        </li>
-        <li class="flex gap-4 items-start">
-          <span class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">🔋</span>
-          <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">ACCUMULI</strong> quella che non consumi subito, invece di regalarla alla rete</p>
-        </li>
-        <li class="flex gap-4 items-start">
-          <span class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">🌙</span>
-          <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">LA USI</strong> quando serve davvero: sera, notte, elettrodomestici, ricarica dell'auto</p>
-        </li>
-        <li class="flex gap-4 items-start">
-          <span class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">📉</span>
-          <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">RIDUCI</strong> la bolletta fino all'80% e ti proteggi dai rincari futuri</p>
-        </li>
-      </ul>
-      <p class="text-gray-600 leading-relaxed border-l-2 border-accent pl-5">Ogni casa è diversa: per questo il primo passo è sempre un sopralluogo tecnico gratuito, per dimensionare l'impianto sui tuoi consumi reali. <strong class="text-primary">Niente preventivi fotocopia.</strong></p>
-    </div>
-  </div>
+  </section>
 
-  <!-- Slideshow foto reali degli interventi -->
-  <div class="mt-20 md:mt-24 reveal" x-data="{
+  <!-- SEZIONE 3 — IL PROBLEMA (agitazione) -->
+  <section class="bg-secondary py-20 md:py-28 border-y border-gray-200">
+    <div class="max-w-4xl mx-auto px-5 md:px-6">
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8 reveal text-primary">Quanto ti costa <span
+          class="text-accent">NON</span> avere il fotovoltaico?</h2>
+      <p class="text-lg text-primary/70 leading-relaxed mb-10 reveal">Ogni anno che passa, una famiglia media versa
+        migliaia di euro al proprio fornitore di energia. Soldi che escono e non tornano. E intanto:</p>
+      <div class="space-y-6">
+        <div class="flex gap-4 reveal">
+          <span class="text-accent font-black text-xl leading-none pt-1">—</span>
+          <p class="text-primary/75 leading-relaxed"><strong class="text-primary font-semibold">Le bollette restano
+              imprevedibili:</strong> basta un inverno rigido o una crisi internazionale per vederle salire di nuovo.
+          </p>
+        </div>
+        <div class="flex gap-4 reveal reveal-delay-1">
+          <span class="text-accent font-black text-xl leading-none pt-1">—</span>
+          <p class="text-primary/75 leading-relaxed"><strong class="text-primary font-semibold">Gli incentivi si
+              riducono:</strong> la detrazione fiscale sull'abitazione principale è fino al 50% nel 2026, ma dal 2027
+            scende al 36%. Aspettare ha un costo concreto.</p>
+        </div>
+        <div class="flex gap-4 reveal reveal-delay-2">
+          <span class="text-accent font-black text-xl leading-none pt-1">—</span>
+          <p class="text-primary/75 leading-relaxed"><strong class="text-primary font-semibold">Il tetto di casa
+              tua</strong> resta l'unico spazio che possiedi e che non ti produce nulla.</p>
+        </div>
+      </div>
+      <p class="text-xl md:text-2xl font-bold leading-snug mt-12 pt-10 border-t border-gray-200 reveal text-primary">La domanda giusta non è
+        «quanto costa un impianto fotovoltaico?».<br class="hidden md:block"> È <span class="text-accent">«quanto mi
+          costa ogni anno non averlo?»</span></p>
+    </div>
+  </section>
+
+  <!-- SEZIONE 4 — LA SOLUZIONE: FOTOVOLTAICO + ACCUMULO -->
+  <section class="max-w-6xl mx-auto px-5 md:px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="md:col-span-6 lg:col-span-5 reveal">
+        <img src="/b2c/assets/img/interventi/intervento-3.webp"
+          alt="Inverter e batterie di accumulo installati da Brokery Solar"
+          class="w-full h-[380px] md:h-[520px] object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async">
+      </div>
+      <div class="md:col-span-6 lg:col-span-7 reveal reveal-delay-1">
+        <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">La soluzione</p>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-5">Il tuo impianto su misura:
+          fotovoltaico + batteria di accumulo</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">Un impianto fotovoltaico da solo produce energia quando c'è il
+          sole. Con la batteria di accumulo, la usi anche la sera e la notte: è così che il risparmio in bolletta
+          diventa davvero importante.</p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex gap-4 items-start">
+            <span
+              class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">☀</span>
+            <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">PRODUCI</strong> la tua
+              energia direttamente dal tetto di casa</p>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span
+              class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">🔋</span>
+            <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">ACCUMULI</strong>
+              quella che non consumi subito, invece di regalarla alla rete</p>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span
+              class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">🌙</span>
+            <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">LA USI</strong> quando
+              serve davvero: sera, notte, elettrodomestici, ricarica dell'auto</p>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span
+              class="bg-accent/10 text-accent font-black text-sm rounded-full h-9 w-9 flex items-center justify-center shrink-0">📉</span>
+            <p class="text-sm text-gray-700 leading-relaxed pt-1.5"><strong class="text-primary">RIDUCI</strong> la
+              bolletta fino all'80% e ti proteggi dai rincari futuri</p>
+          </li>
+        </ul>
+        <p class="text-gray-600 leading-relaxed border-l-2 border-accent pl-5">Ogni casa è diversa: per questo il primo
+          passo è sempre un sopralluogo tecnico gratuito, per dimensionare l'impianto sui tuoi consumi reali. <strong
+            class="text-primary">Niente preventivi fotocopia.</strong></p>
+      </div>
+    </div>
+
+    <!-- Slideshow foto reali degli interventi -->
+    <div class="mt-20 md:mt-24 reveal" x-data="{
       i: 0,
       photos: [
-        {src:'assets/img/interventi/intervento-4.webp', alt:'Impianto fotovoltaico su tetto a falda in contesto collinare'},
-        {src:'assets/img/interventi/intervento-1.webp', alt:'Moduli fotovoltaici installati su tetto in tegole'},
-        {src:'assets/img/interventi/intervento-3.webp', alt:'Inverter e batterie di accumulo installati a parete'}
+        {src:'/b2c/assets/img/interventi/intervento-4.webp', alt:'Impianto fotovoltaico su tetto a falda in contesto collinare'},
+        {src:'/b2c/assets/img/interventi/intervento-1.webp', alt:'Moduli fotovoltaici installati su tetto in tegole'},
+        {src:'/b2c/assets/img/interventi/intervento-3.webp', alt:'Inverter e batterie di accumulo installati a parete'},
+        {src:'/b2c/assets/img/interventi/intervento-5.webp', alt:'Installazione di pannelli fotovoltaici su copertura residenziale'},
+        {src:'/b2c/assets/img/interventi/intervento-6.webp', alt:'Impianto fotovoltaico Brokery Solar su tetto di abitazione'},
+        {src:'/b2c/assets/img/interventi/intervento-7.webp', alt:'Dettaglio dei moduli fotovoltaici installati sul tetto'},
+        {src:'/b2c/assets/img/interventi/intervento-8.webp', alt:'Tecnici Brokery Solar durante il montaggio dei pannelli'},
+        {src:'/b2c/assets/img/interventi/intervento-9.webp', alt:'Sistema di accumulo e inverter dell\'impianto fotovoltaico'},
+        {src:'/b2c/assets/img/interventi/intervento-10.webp', alt:'Pannelli fotovoltaici installati su tetto a falda'},
+        {src:'/b2c/assets/img/interventi/intervento-11.webp', alt:'Impianto fotovoltaico residenziale completato'}
       ],
       next() { this.i = (this.i + 1) % this.photos.length },
       prev() { this.i = (this.i - 1 + this.photos.length) % this.photos.length }
-    }"
-    x-init="setInterval(() => next(), 5000)">
-    <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4 text-center">Ecco alcune foto reali dei nostri interventi</p>
-    <div class="relative rounded-2xl overflow-hidden brand-dark shadow-lg">
-      <template x-for="(p, idx) in photos" :key="idx">
-        <img :src="p.src" :alt="p.alt" x-show="i === idx" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-             class="w-full h-[280px] sm:h-[420px] md:h-[560px] object-cover" :loading="idx === 0 ? 'eager' : 'lazy'" decoding="async">
-      </template>
-      <button @click="prev()" aria-label="Foto precedente" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-primary rounded-full h-10 w-10 flex items-center justify-center shadow transition-colors duration-200">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-      </button>
-      <button @click="next()" aria-label="Foto successiva" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-primary rounded-full h-10 w-10 flex items-center justify-center shadow transition-colors duration-200">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      </button>
-      <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2">
-        <template x-for="(p, idx) in photos" :key="'d'+idx">
-          <button @click="i = idx" :aria-label="'Vai alla foto ' + (idx+1)" class="h-2 rounded-full transition-all duration-300" :class="i === idx ? 'bg-yellow w-6' : 'bg-white/50 w-2 hover:bg-white/80'"></button>
+    }" x-init="setInterval(() => next(), 5000)">
+      <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4 text-center">Ecco alcune foto reali dei nostri
+        interventi</p>
+      <div class="relative rounded-2xl overflow-hidden brand-dark shadow-lg">
+        <template x-for="(p, idx) in photos" :key="idx">
+          <img :src="p.src" :alt="p.alt" x-show="i === idx" x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+            class="w-full h-[280px] sm:h-[420px] md:h-[560px] object-cover" :loading="idx === 0 ? 'eager' : 'lazy'"
+            decoding="async">
         </template>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALDAIA IBRIDA (estensione di offerta) -->
-<section class="bg-secondary py-16 md:py-20 border-y border-gray-200">
-  <div class="max-w-5xl mx-auto px-5 md:px-6">
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-8 reveal">
-        <p class="text-xs uppercase tracking-[0.3em] text-accent mb-3">Anche il riscaldamento</p>
-        <h2 class="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-4">Abbina la caldaia ibrida e riscalda con la tua energia</h2>
-        <p class="text-gray-600 leading-relaxed text-sm md:text-base mb-3">Sostituendo la vecchia caldaia con un sistema ibrido (pompa di calore + caldaia a condensazione) la pompa di calore va a elettricità — e quell'elettricità te la produci dal tetto. Il Conto Termico incentiva la sostituzione fino al 65% sulla spesa ammissibile, che applichiamo come sconto diretto in fattura: paghi solo la differenza, e alla pratica GSE pensiamo noi.</p>
-        <p class="text-xs text-gray-500 leading-relaxed">Il contributo fino al 65% riguarda l'intervento integrato che include la pompa di calore: il fotovoltaico installato da solo non è incentivabile dal Conto Termico, e su di esso si applica la detrazione fino al 50% (2026, abitazione principale).</p>
-      </div>
-      <div class="md:col-span-4 reveal reveal-delay-1">
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <p class="text-3xl font-black text-accent mb-1">fino al 65%</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-4">di sconto in fattura sulla spesa ammissibile per la sostituzione con sistema ibrido</p>
-          <p class="text-xs text-gray-500">Pratica GSE inclusa · valutiamo la fattibilità al sopralluogo</p>
+        <button @click="prev()" aria-label="Foto precedente"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-primary rounded-full h-10 w-10 flex items-center justify-center shadow transition-colors duration-200">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button @click="next()" aria-label="Foto successiva"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-primary rounded-full h-10 w-10 flex items-center justify-center shadow transition-colors duration-200">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2">
+          <template x-for="(p, idx) in photos" :key="'d'+idx">
+            <button @click="i = idx" :aria-label="'Vai alla foto ' + (idx+1)"
+              class="h-2 rounded-full transition-all duration-300"
+              :class="i === idx ? 'bg-yellow w-6' : 'bg-white/50 w-2 hover:bg-white/80'"></button>
+          </template>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEZIONE 5 — LA GARANZIA DEI 30 GIORNI -->
-<section class="relative overflow-hidden">
-  <img src="/b2c/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
-  <div class="absolute inset-0 brand-dark-overlay"></div>
-  <div class="relative max-w-4xl mx-auto px-5 md:px-6 py-20 md:py-28 text-center">
-    <div class="inline-flex items-center gap-2 border-2 border-yellow rounded-full px-5 py-2 mb-8 reveal">
-      <svg class="h-5 w-5 text-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 12l1.8 1.8L15 10"/></svg>
-      <span class="text-yellow text-xs font-bold uppercase tracking-[0.2em]">Garanzia contrattuale</span>
-    </div>
-    <p class="text-white/70 text-base md:text-lg mb-4 reveal">La promessa che nessun altro ti mette per iscritto:</p>
-    <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-white mb-10 reveal">Impianto installato entro 30 giorni.<br><span class="text-yellow">Garantito.</span></h2>
-    <div class="max-w-2xl mx-auto space-y-5 text-white/75 leading-relaxed text-left md:text-center">
-      <p class="reveal">Nel fotovoltaico italiano il problema non è quasi mai il preventivo: è quello che succede dopo la firma. Mesi di attesa, telefonate senza risposta, cantieri che non partono.</p>
-      <p class="reveal reveal-delay-1">Noi lavoriamo al contrario: <strong class="text-white font-semibold">prima organizziamo, poi firmiamo.</strong> Per questo possiamo garantirti per contratto l'installazione entro 30 giorni dalla data concordata.</p>
-      <p class="reveal reveal-delay-2">È il nostro modo di alzare gli standard di un settore che ne ha bisogno. E se un'azienda non è disposta a mettere i tempi nero su bianco, forse una domanda dovresti fartela.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SEZIONE 6 — COME FUNZIONA (3 PASSI) -->
-<section class="max-w-6xl mx-auto px-5 md:px-6 py-20 md:py-28">
-  <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-12 max-w-3xl reveal">Dal primo contatto all'interruttore acceso: 3 passi, zero pensieri</h2>
-  <div class="grid md:grid-cols-3 gap-px bg-gray-200 rounded-2xl overflow-hidden">
-    <div class="bg-white p-8 reveal">
-      <p class="text-5xl font-black text-light mb-4">01</p>
-      <h3 class="font-bold mb-3">Sopralluogo gratuito</h3>
-      <p class="text-sm text-gray-600 leading-relaxed">Un nostro tecnico viene da te, analizza tetto e consumi reali e ti dice con onestà se e quanto conviene. <strong class="text-primary">Se non conviene, te lo diciamo.</strong></p>
-    </div>
-    <div class="bg-white p-8 reveal reveal-delay-1">
-      <p class="text-5xl font-black text-light mb-4">02</p>
-      <h3 class="font-bold mb-3">Progetto e pratiche</h3>
-      <p class="text-sm text-gray-600 leading-relaxed">Ricevi un progetto su misura con simulazione di risparmio e piano economico chiaro. Tutte le pratiche (connessione, comunicazioni, detrazioni) le gestiamo noi.</p>
-    </div>
-    <div class="bg-white p-8 reveal reveal-delay-2">
-      <p class="text-5xl font-black text-light mb-4">03</p>
-      <h3 class="font-bold mb-3">Installazione in 30 giorni</h3>
-      <p class="text-sm text-gray-600 leading-relaxed">Squadra qualificata, cantiere pulito, impianto collaudato e attivo. E dopo, restiamo noi il tuo unico punto di riferimento.</p>
-    </div>
-  </div>
-  <div class="mt-12 text-center reveal">
-    <a href="#contatti" class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Prenota il primo passo: sopralluogo gratuito</a>
-  </div>
-</section>
-
-<!-- SEZIONE 7 — SIMULAZIONE DI RISPARMIO -->
-<section class="bg-secondary py-20 md:py-28">
-  <div class="max-w-4xl mx-auto px-5 md:px-6">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-3 reveal">Facciamo due conti</h2>
-    <p class="text-gray-600 mb-10 reveal">Esempio di dimensionamento tipo: famiglia di 4 persone · villetta con tetto a falda · impianto 6 kW con accumulo 10 kWh</p>
-    <div class="grid md:grid-cols-2 gap-5">
-      <div class="bg-white border border-gray-200 rounded-2xl p-8 reveal">
-        <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4">Senza impianto</p>
-        <p class="text-4xl md:text-5xl font-black text-gray-400 mb-2">~1.800&nbsp;€</p>
-        <p class="text-sm text-gray-500">spesa elettrica annua indicativa</p>
-      </div>
-      <div class="brand-dark rounded-2xl p-8 text-white reveal reveal-delay-1">
-        <p class="text-xs uppercase tracking-[0.2em] text-light mb-4">Con fotovoltaico + accumulo</p>
-        <p class="text-4xl md:text-5xl font-black text-yellow mb-2">~400&nbsp;€</p>
-        <p class="text-sm text-white/60 mb-5">spesa residua indicativa</p>
-        <p class="text-lg font-bold border-t hairline pt-5">Risparmio annuo: ~1.400&nbsp;€</p>
+  <!-- CALDAIA IBRIDA (estensione di offerta) -->
+  <section class="bg-secondary py-16 md:py-20 border-y border-gray-200">
+    <div class="max-w-5xl mx-auto px-5 md:px-6">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-8 reveal">
+          <p class="text-xs uppercase tracking-[0.3em] text-accent mb-3">Anche il riscaldamento</p>
+          <h2 class="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-4">Abbina la caldaia ibrida e
+            riscalda con la tua energia</h2>
+          <p class="text-gray-600 leading-relaxed text-sm md:text-base mb-3">Sostituendo la vecchia caldaia con un
+            sistema ibrido (pompa di calore + caldaia a condensazione) la pompa di calore va a elettricità — e
+            quell'elettricità te la produci dal tetto. Il Conto Termico incentiva la sostituzione fino al 65% sulla
+            spesa ammissibile, che applichiamo come sconto diretto in fattura: paghi solo la differenza, e alla pratica
+            GSE pensiamo noi.</p>
+          <p class="text-xs text-gray-500 leading-relaxed">Il contributo fino al 65% riguarda l'intervento integrato che
+            include la pompa di calore: il fotovoltaico installato da solo non è incentivabile dal Conto Termico, e su
+            di esso si applica la detrazione fino al 50% (2026, abitazione principale).</p>
+        </div>
+        <div class="md:col-span-4 reveal reveal-delay-1">
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <p class="text-3xl font-black text-accent mb-1">fino al 65%</p>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">di sconto in fattura sulla spesa ammissibile per la
+              sostituzione con sistema ibrido</p>
+            <p class="text-xs text-gray-500">Pratica GSE inclusa · valutiamo la fattibilità al sopralluogo</p>
+          </div>
+        </div>
       </div>
     </div>
-    <p class="text-gray-600 leading-relaxed mt-8 reveal">In 25 anni di vita utile dell'impianto, parliamo di decine di migliaia di euro che restano in famiglia invece di finire in bolletta. E con la detrazione fino al 50% nel 2026, il tempo di rientro dell'investimento si accorcia sensibilmente.</p>
-    <div class="mt-8 bg-white border-l-4 border-yellowDark rounded-r-xl p-5 reveal">
-      <p class="text-xs text-gray-600 leading-relaxed"><strong class="text-primary">⚠ Simulazione a scopo puramente illustrativo.</strong> Il risparmio effettivo dipende da consumi, esposizione del tetto, dimensionamento e abitudini di utilizzo. Il tuo numero vero lo calcoliamo insieme, gratis, al sopralluogo.</p>
-    </div>
-    <div class="mt-10 text-center reveal">
-      <a href="#contatti" class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Scopri quanto puoi risparmiare tu</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEZIONE 8 — LA FINESTRA FISCALE 2026 -->
-<section class="brand-dark text-white py-20 md:py-28">
-  <div class="max-w-4xl mx-auto px-5 md:px-6">
-    <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-10 reveal">Il 2026 è l'anno giusto.<br><span class="text-white/50">Il 2027 lo sarà meno.</span></h2>
-    <div class="grid grid-cols-2 gap-5 mb-10">
-      <div class="border-2 border-yellow rounded-2xl p-6 md:p-8 reveal">
-        <p class="text-xs uppercase tracking-[0.2em] text-yellow mb-3">2026</p>
-        <p class="text-4xl md:text-6xl font-black text-yellow mb-2">fino al 50%</p>
-        <p class="text-sm text-white/60">di detrazione IRPEF sull'abitazione principale</p>
+  <!-- SEZIONE 5 — LA GARANZIA DEI 30 GIORNI -->
+  <section class="relative overflow-hidden">
+    <img src="/b2c/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy"
+      decoding="async">
+    <div class="absolute inset-0 brand-dark-overlay"></div>
+    <div class="relative max-w-4xl mx-auto px-5 md:px-6 py-20 md:py-28 text-center">
+      <div class="inline-flex items-center gap-2 border-2 border-yellow rounded-full px-5 py-2 mb-8 reveal">
+        <svg class="h-5 w-5 text-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 12l1.8 1.8L15 10" />
+        </svg>
       </div>
-      <div class="border hairline rounded-2xl p-6 md:p-8 reveal reveal-delay-1">
-        <p class="text-xs uppercase tracking-[0.2em] text-white/40 mb-3">Dal 2027</p>
-        <p class="text-4xl md:text-6xl font-black text-white/40 mb-2">36%</p>
-        <p class="text-sm text-white/40">aliquota a cui è destinata a scendere</p>
-      </div>
-    </div>
-    <div class="space-y-5 text-white/75 leading-relaxed">
-      <p class="reveal">Oggi, per gli interventi sull'abitazione principale, puoi detrarre dall'IRPEF fino al 50% della spesa per il tuo impianto fotovoltaico, recuperandola in 10 anni. Dal 1° gennaio 2027, l'aliquota è destinata a scendere al 36%.</p>
-      <p class="reveal reveal-delay-1">Su un impianto residenziale tipo, la differenza tra le due aliquote può valere diverse migliaia di euro di detrazione in meno. <strong class="text-white font-semibold">Non è marketing: è il calendario fiscale.</strong></p>
-      <p class="reveal reveal-delay-2">Considera anche i tempi tecnici: sopralluogo, progetto, pratiche e installazione richiedono settimane. Chi vuole chiudere con le regole del 2026 deve muoversi ora, non a dicembre.</p>
-    </div>
-    <div class="mt-12 reveal">
-      <a href="#contatti" class="block md:inline-block text-center bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Blocca le condizioni 2026: richiedi il sopralluogo</a>
-    </div>
-  </div>
-</section>
-
-<!-- SEZIONE 9 — CHI SIAMO -->
-<section class="bg-secondary py-20 md:py-28">
-  <div class="max-w-6xl mx-auto px-5 md:px-6 grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
-    <div class="md:col-span-6 reveal">
-      <img src="/b2c/assets/img/interventi/intervento-1.webp" alt="Impianto fotovoltaico Brokery Solar completato su abitazione residenziale" class="w-full h-[380px] md:h-[520px] object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async">
-    </div>
-    <div class="md:col-span-6 reveal reveal-delay-1">
-      <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">Chi siamo</p>
-      <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-6">Dietro ogni impianto c'è un gruppo, non un furgone</h2>
-      <div class="space-y-5 text-gray-600 leading-relaxed">
-        <p>Brokery Solar è la divisione fotovoltaico ed efficienza energetica di <strong class="text-primary">Gruppo Brokery</strong>: 10 anni di storia e oltre 100.000 clienti seguiti in tutta Italia.</p>
-        <p>Cosa significa per te? Che non stai firmando con una partita IVA aperta ieri: stai entrando in una struttura con persone, processi e responsabilità. Che risponde al telefono. Che ci sarà anche tra dieci anni, quando il tuo impianto avrà bisogno di un controllo.</p>
-        <p>Siamo nati con un obiettivo dichiarato: <strong class="text-primary">alzare gli standard di un settore che ha deluso troppe famiglie.</strong> Ogni scelta che leggi in questa pagina — la garanzia scritta, la gestione totale delle pratiche, il sopralluogo onesto — nasce da lì.</p>
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-white mb-10 reveal">
+        Impianto installato entro 30 giorni.</h2>
+      <div class="max-w-2xl mx-auto space-y-5 text-white/75 leading-relaxed text-left md:text-center">
+        <p class="reveal">Nel fotovoltaico italiano il problema non è quasi mai il preventivo: è quello che succede dopo
+          la firma. Mesi di attesa, telefonate senza risposta, cantieri che non partono.</p>
+        <p class="reveal reveal-delay-1">Noi lavoriamo al contrario: <strong class="text-white font-semibold">prima
+            organizziamo, poi firmiamo.</strong> Per questo possiamo garantirti per contratto l'installazione entro 30
+          giorni dalla data concordata.</p>
+        <p class="reveal reveal-delay-2">È il nostro modo di alzare gli standard di un settore che ne ha bisogno. E se
+          un'azienda non è disposta a mettere i tempi nero su bianco, forse una domanda dovresti fartela.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEZIONE 10 — FAQ -->
-<section class="max-w-3xl mx-auto px-5 md:px-6 py-20 md:py-28">
-  <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-10 reveal">Le domande che ci fanno tutti (e le risposte oneste)</h2>
-  <div x-data="{ open: 0 }" class="space-y-3">
-    <template x-for="(item, i) in [
+  <!-- SEZIONE 6 — COME FUNZIONA (3 PASSI) -->
+  <section class="max-w-6xl mx-auto px-5 md:px-6 py-20 md:py-28">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-12 max-w-3xl reveal">Dal primo contatto
+      all'interruttore acceso: 3 passi, zero pensieri</h2>
+    <div class="grid md:grid-cols-3 gap-px bg-gray-200 rounded-2xl overflow-hidden">
+      <div class="bg-white p-8 reveal">
+        <p class="text-5xl font-black text-light mb-4">01</p>
+        <h3 class="font-bold mb-3">Sopralluogo gratuito</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Un nostro tecnico viene da te, analizza tetto e consumi reali e
+          ti dice con onestà se e quanto conviene. <strong class="text-primary">Se non conviene, te lo diciamo.</strong>
+        </p>
+      </div>
+      <div class="bg-white p-8 reveal reveal-delay-1">
+        <p class="text-5xl font-black text-light mb-4">02</p>
+        <h3 class="font-bold mb-3">Progetto e pratiche</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Ricevi un progetto su misura con simulazione di risparmio e
+          piano economico chiaro. Tutte le pratiche (connessione, comunicazioni, detrazioni) le gestiamo noi.</p>
+      </div>
+      <div class="bg-white p-8 reveal reveal-delay-2">
+        <p class="text-5xl font-black text-light mb-4">03</p>
+        <h3 class="font-bold mb-3">Installazione in 30 giorni</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Squadra qualificata, cantiere pulito, impianto collaudato e
+          attivo. E dopo, restiamo noi il tuo unico punto di riferimento.</p>
+      </div>
+    </div>
+    <div class="mt-12 text-center reveal">
+      <a href="#contatti"
+        class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Prenota
+        il primo passo: sopralluogo gratuito</a>
+    </div>
+  </section>
+
+  <!-- SEZIONE 7 — SIMULAZIONE DI RISPARMIO -->
+  <section class="bg-secondary py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-5 md:px-6">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-3 reveal">Facciamo due conti</h2>
+      <p class="text-gray-600 mb-10 reveal">Esempio di dimensionamento tipo: famiglia di 4 persone · villetta con tetto
+        a falda · impianto 6 kW con accumulo 10 kWh</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 reveal">
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4">Senza impianto</p>
+          <p class="text-4xl md:text-5xl font-black text-gray-400 mb-2">~1.800&nbsp;€</p>
+          <p class="text-sm text-gray-500">spesa elettrica annua indicativa</p>
+        </div>
+        <div class="brand-dark rounded-2xl p-8 text-white reveal reveal-delay-1">
+          <p class="text-xs uppercase tracking-[0.2em] text-light mb-4">Con fotovoltaico + accumulo</p>
+          <p class="text-4xl md:text-5xl font-black text-yellow mb-2">~400&nbsp;€</p>
+          <p class="text-sm text-white/60 mb-5">spesa residua indicativa</p>
+          <p class="text-lg font-bold border-t hairline pt-5">Risparmio annuo: ~1.400&nbsp;€</p>
+        </div>
+      </div>
+      <p class="text-gray-600 leading-relaxed mt-8 reveal">In 25 anni di vita utile dell'impianto, parliamo di decine di
+        migliaia di euro che restano in famiglia invece di finire in bolletta. E con la detrazione fino al 50% nel 2026,
+        il tempo di rientro dell'investimento si accorcia sensibilmente.</p>
+      <div class="mt-8 bg-white border-l-4 border-yellowDark rounded-r-xl p-5 reveal">
+        <p class="text-xs text-gray-600 leading-relaxed"><strong class="text-primary">⚠ Simulazione a scopo puramente
+            illustrativo.</strong> Il risparmio effettivo dipende da consumi, esposizione del tetto, dimensionamento e
+          abitudini di utilizzo. Il tuo numero vero lo calcoliamo insieme, gratis, al sopralluogo.</p>
+      </div>
+      <div class="mt-10 text-center reveal">
+        <a href="#contatti"
+          class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Scopri
+          quanto puoi risparmiare tu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 9 — CHI SIAMO -->
+  <section class="bg-secondary py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-5 md:px-6 grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="md:col-span-6 reveal">
+        <img src="/b2c/assets/img/interventi/intervento-1.webp"
+          alt="Impianto fotovoltaico Brokery Solar completato su abitazione residenziale"
+          class="w-full h-[380px] md:h-[520px] object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async">
+      </div>
+      <div class="md:col-span-6 reveal reveal-delay-1">
+        <p class="text-xs uppercase tracking-[0.3em] text-accent mb-4">Chi siamo</p>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-6">Dietro ogni impianto c'è un
+          gruppo capillare</h2>
+        <div class="space-y-5 text-gray-600 leading-relaxed">
+          <p>Brokery Solar è la divisione fotovoltaico ed efficienza energetica di <strong class="text-primary">Gruppo
+              Brokery</strong>: 10 anni di storia e oltre 100.000 clienti seguiti in tutta Italia.</p>
+          <p>Cosa significa per te? Che non stai firmando con una partita IVA aperta ieri: stai entrando in una
+            struttura con persone, processi e responsabilità. Che risponde al telefono. Che ci sarà anche tra dieci
+            anni, quando il tuo impianto avrà bisogno di un controllo.</p>
+          <p>Siamo nati con un obiettivo dichiarato: <strong class="text-primary">alzare gli standard di un settore che
+              ha deluso troppe famiglie.</strong> Ogni scelta che leggi in questa pagina — la garanzia scritta, la
+            gestione totale delle pratiche, il sopralluogo onesto — nasce da lì.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE 10 — FAQ -->
+  <section class="max-w-3xl mx-auto px-5 md:px-6 py-20 md:py-28">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-10 reveal">Le domande che ci fanno tutti
+      (e le risposte oneste)</h2>
+    <div x-data="{ open: 0 }" class="space-y-3">
+      <template x-for="(item, i) in [
       {q:'Quanto costa un impianto fotovoltaico con accumulo?', a:'Dipende da consumi, tetto e dimensionamento: per questo non pubblichiamo listini fotocopia. Al sopralluogo gratuito ricevi un preventivo chiaro, definitivo e senza costi nascosti — e con la detrazione fino al 50% (2026, abitazione principale) una parte importante della spesa torna indietro.'},
       {q:'E se il mio tetto non fosse adatto?', a:'Te lo diciamo al sopralluogo, gratis. Se l\'impianto non conviene, non te lo vendiamo: la nostra reputazione vale più di una vendita.'},
       {q:'Chi si occupa delle pratiche e della burocrazia?', a:'Noi, al 100%: connessione alla rete, comunicazioni, documentazione per la detrazione. Tu firmi, noi facciamo.'},
@@ -358,88 +518,111 @@ document.addEventListener('DOMContentLoaded', function() {
       {q:'Il fotovoltaico da solo rientra nel Conto Termico?', a:'No. Il fotovoltaico installato da solo non è incentivabile dal Conto Termico: il contributo fino al 65% riguarda l\'intervento integrato che include la pompa di calore, a cui il fotovoltaico può essere abbinato. Sul fotovoltaico dell\'abitazione principale si applica invece la detrazione fino al 50% (2026). Chi ti promette «65% sui pannelli» non è preciso.'},
       {q:'Il sopralluogo mi impegna a qualcosa?', a:'No. È gratuito, senza impegno e senza pressioni. Serve a darti numeri veri sulla tua casa: poi decidi tu, con calma.'}
     ]" :key="i">
-      <div class="border border-gray-200 rounded-2xl overflow-hidden">
-        <button @click="open = open === i ? -1 : i" class="w-full flex items-center justify-between p-5 text-left hover:bg-secondary transition-colors duration-200">
-          <span class="font-semibold pr-4 text-sm" x-text="item.q"></span>
-          <span class="text-2xl font-light flex-shrink-0 transition-transform duration-200 text-accent" :class="open === i ? 'rotate-45' : ''">+</span>
-        </button>
-        <div x-show="open === i" x-collapse class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
-          <span x-text="item.a"></span>
+        <div class="border border-gray-200 rounded-2xl overflow-hidden">
+          <button @click="open = open === i ? -1 : i"
+            class="w-full flex items-center justify-between p-5 text-left hover:bg-secondary transition-colors duration-200">
+            <span class="font-semibold pr-4 text-sm" x-text="item.q"></span>
+            <span class="text-2xl font-light flex-shrink-0 transition-transform duration-200 text-accent"
+              :class="open === i ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="open === i" x-collapse class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+            <span x-text="item.a"></span>
+          </div>
         </div>
+      </template>
+    </div>
+    <div class="mt-12 text-center reveal">
+      <a href="#contatti"
+        class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Ho
+        le idee chiare: prenota il sopralluogo</a>
+    </div>
+  </section>
+
+  <!-- SEZIONE 11 — FORM -->
+  <section id="contatti" class="relative overflow-hidden">
+    <img src="/b2c/assets/img/hero-solar.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy"
+      decoding="async">
+    <div class="absolute inset-0 brand-dark-overlay"></div>
+    <div class="relative max-w-7xl mx-auto px-5 md:px-6 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-5">
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-5 text-white reveal">Richiedi il tuo
+          sopralluogo gratuito</h2>
+        <p class="text-white/75 leading-relaxed max-w-md mb-8 reveal">Bastano 30 secondi. Ti ricontattiamo entro 24 ore
+          lavorative con un tecnico della tua zona.</p>
+        <ul class="space-y-3 text-sm text-white/70 mb-8 reveal">
+          <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Sopralluogo e studio di fattibilità
+            gratuiti</li>
+          <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Nessun impegno, nessuna pressione</li>
+          <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Installazione garantita in 30 giorni</li>
+        </ul>
+        <p class="text-xs text-white/50 leading-relaxed reveal">🔒 I tuoi dati sono al sicuro. Li usiamo solo per
+          ricontattarti: niente spam, niente cessioni a terzi.</p>
       </div>
-    </template>
-  </div>
-  <div class="mt-12 text-center reveal">
-    <a href="#contatti" class="inline-block bg-yellow text-primary font-bold px-8 md:px-10 py-5 text-sm uppercase tracking-[0.08em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Ho le idee chiare: prenota il sopralluogo</a>
-  </div>
-</section>
-
-<!-- SEZIONE 11 — FORM -->
-<section id="contatti" class="relative overflow-hidden">
-  <img src="/b2c/assets/img/hero-solar.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
-  <div class="absolute inset-0 brand-dark-overlay"></div>
-  <div class="relative max-w-7xl mx-auto px-5 md:px-6 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-center">
-    <div class="md:col-span-5">
-      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-5 text-white reveal">Richiedi il tuo sopralluogo gratuito</h2>
-      <p class="text-white/75 leading-relaxed max-w-md mb-8 reveal">Bastano 30 secondi. Ti ricontattiamo entro 24 ore lavorative con un tecnico della tua zona.</p>
-      <ul class="space-y-3 text-sm text-white/70 mb-8 reveal">
-        <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Sopralluogo e studio di fattibilità gratuiti</li>
-        <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Nessun impegno, nessuna pressione</li>
-        <li class="flex gap-3"><span class="text-yellow font-bold">✓</span> Installazione garantita in 30 giorni</li>
-      </ul>
-      <p class="text-xs text-white/50 leading-relaxed reveal">🔒 I tuoi dati sono al sicuro. Li usiamo solo per ricontattarti: niente spam, niente cessioni a terzi.</p>
+      <div
+        class="md:col-span-7 w-full max-w-[700px] md:justify-self-end bg-white text-primary p-2 rounded-2xl shadow-xl reveal reveal-delay-1">
+        <iframe src="https://api.leadconnectorhq.com/widget/form/LiMHjwwAGcz6TI0Ck0WK"
+          style="width:100%;min-height:640px;border:none;border-radius:8px" id="inline-LiMHjwwAGcz6TI0Ck0WK"
+          data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+          data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+          data-deactivation-value="" data-form-name="brokerysolar.it" data-height="undefined"
+          data-layout-iframe-id="inline-LiMHjwwAGcz6TI0Ck0WK" data-form-id="LiMHjwwAGcz6TI0Ck0WK"
+          title="brokerysolar.it">
+        </iframe>
+      </div>
     </div>
-    <div class="md:col-span-7 w-full max-w-[700px] md:justify-self-end bg-white text-primary p-2 rounded-2xl shadow-xl reveal reveal-delay-1">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/LiMHjwwAGcz6TI0Ck0WK"
-        style="width:100%;min-height:640px;border:none;border-radius:8px"
-        id="inline-LiMHjwwAGcz6TI0Ck0WK"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="brokerysolar.it"
-        data-height="undefined"
-        data-layout-iframe-id="inline-LiMHjwwAGcz6TI0Ck0WK"
-        data-form-id="LiMHjwwAGcz6TI0Ck0WK"
-        title="brokerysolar.it">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEZIONE 12 — FOOTER -->
-<footer class="brand-dark border-t hairline pb-24 md:pb-0">
-  <div class="max-w-6xl mx-auto px-5 md:px-6 py-12 flex flex-col md:flex-row justify-between gap-8 text-sm text-white/50">
-    <div>
-      <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 mb-4">
-        <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 w-auto">
-      </span>
-      <p class="text-xs leading-relaxed">Brokery Solar — divisione fotovoltaico ed efficienza energetica di Gruppo Brokery</p>
+  <!-- SEZIONE 12 — FOOTER -->
+  <footer class="brand-dark border-t hairline pb-24 md:pb-0">
+    <div
+      class="max-w-6xl mx-auto px-5 md:px-6 py-12 flex flex-col md:flex-row justify-between gap-8 text-sm text-white/50">
+      <div>
+        <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 mb-4">
+          <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 w-auto">
+        </span>
+        <p class="text-xs leading-relaxed">Brokery Solar — divisione fotovoltaico ed efficienza energetica di Gruppo
+          Brokery</p>
+      </div>
+      <div class="text-xs md:text-right leading-relaxed">
+        <p>P.IVA IT04125210122</p>
+        <p class="mt-1">Via Magatti 3, 21100 Varese (VA)</p>
+        <p class="mt-1"><a href="tel:+39800032645" class="hover:text-white transition-colors">800 032 645</a> · <a href="mailto:info@brokerysolar.it" class="hover:text-white transition-colors">info@brokerysolar.it</a></p>
+        <p class="mt-3">© 2026 · <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          · <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+          · <a href="#" class="hover:text-white transition-colors">Termini e Condizioni</a></p>
+      </div>
     </div>
-    <div class="text-xs md:text-right leading-relaxed">
-      <p>[Ragione sociale] · P.IVA [P.IVA]</p>
-      <p class="mt-1">[Indirizzo sede]</p>
-      <p class="mt-1">[Telefono] · [Email]</p>
-      <p class="mt-3">© 2026 · <a href="[link-privacy]" class="hover:text-white transition-colors">Privacy Policy</a> · <a href="[link-cookie]" class="hover:text-white transition-colors">Cookie Policy</a></p>
+    <div class="max-w-6xl mx-auto px-5 md:px-6 pb-12">
+      <p class="text-[11px] leading-relaxed text-white/35 border-t hairline pt-6">Le informazioni sulle detrazioni
+        fiscali si riferiscono alla normativa vigente alla data di pubblicazione (detrazione IRPEF fino al 50% per
+        interventi sull'abitazione principale, anno 2026; dal 2027 l'aliquota è destinata a scendere al 36%) e possono
+        variare in base alla situazione fiscale personale e a futuri aggiornamenti normativi. La detrazione si recupera
+        in 10 anni ed è soggetta a capienza fiscale. Tutte le simulazioni di risparmio presenti in questa pagina hanno
+        scopo puramente illustrativo: il risparmio effettivo dipende da consumi, esposizione, dimensionamento e
+        abitudini di utilizzo. La riduzione «fino all'80%» della spesa energetica è riferita a condizioni ottimali di
+        autoconsumo con fotovoltaico e accumulo. Il Conto Termico riconosce un contributo fino al 65% calcolato sulla
+        spesa ammissibile secondo i massimali GSE, riferito all'intervento integrato che include la pompa di calore: il
+        fotovoltaico installato da solo non è incentivabile dal Conto Termico.</p>
     </div>
-  </div>
-  <div class="max-w-6xl mx-auto px-5 md:px-6 pb-12">
-    <p class="text-[11px] leading-relaxed text-white/35 border-t hairline pt-6">Le informazioni sulle detrazioni fiscali si riferiscono alla normativa vigente alla data di pubblicazione (detrazione IRPEF fino al 50% per interventi sull'abitazione principale, anno 2026; dal 2027 l'aliquota è destinata a scendere al 36%) e possono variare in base alla situazione fiscale personale e a futuri aggiornamenti normativi. La detrazione si recupera in 10 anni ed è soggetta a capienza fiscale. Tutte le simulazioni di risparmio presenti in questa pagina hanno scopo puramente illustrativo: il risparmio effettivo dipende da consumi, esposizione, dimensionamento e abitudini di utilizzo. La riduzione «fino all'80%» della spesa energetica è riferita a condizioni ottimali di autoconsumo con fotovoltaico e accumulo. Il Conto Termico riconosce un contributo fino al 65% calcolato sulla spesa ammissibile secondo i massimali GSE, riferito all'intervento integrato che include la pompa di calore: il fotovoltaico installato da solo non è incentivabile dal Conto Termico.</p>
-  </div>
-</footer>
+  </footer>
 
-<!-- CTA FISSA MOBILE -->
-<div class="md:hidden fixed bottom-0 inset-x-0 z-50 brand-dark-overlay backdrop-blur-md border-t hairline px-4 py-3 flex gap-3">
-  <a href="tel:[Telefono]" class="shrink-0 border border-white/30 text-white rounded-full h-12 w-12 flex items-center justify-center" aria-label="Chiamaci">
-    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.97.757l1 4a1 1 0 01-.29.98l-1.6 1.6a14 14 0 006.08 6.08l1.6-1.6a1 1 0 01.98-.29l4 1a1 1 0 01.757.97V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
-  </a>
-  <a href="#contatti" class="flex-1 bg-yellow text-primary font-bold text-sm rounded-full h-12 flex items-center justify-center text-center px-3">Sopralluogo gratuito</a>
-</div>
+  <!-- CTA FISSA MOBILE -->
+  <div
+    class="md:hidden fixed bottom-0 inset-x-0 z-50 brand-dark-overlay backdrop-blur-md border-t hairline px-4 py-3 flex gap-3">
+    <a href="tel:+39800032645"
+      class="shrink-0 border border-white/30 text-white rounded-full h-12 w-12 flex items-center justify-center"
+      aria-label="Chiamaci">
+      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 5a2 2 0 012-2h2.5a1 1 0 01.97.757l1 4a1 1 0 01-.29.98l-1.6 1.6a14 14 0 006.08 6.08l1.6-1.6a1 1 0 01.98-.29l4 1a1 1 0 01.757.97V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
+      </svg>
+    </a>
+    <a href="#contatti"
+      class="flex-1 bg-yellow text-primary font-bold text-sm rounded-full h-12 flex items-center justify-center text-center px-3">Contattaci
+      gratuito</a>
+  </div>
 
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
+
 </html>
