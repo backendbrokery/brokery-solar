@@ -543,119 +543,25 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <div class="lg:col-span-7">
-      <!--
-        ════════ INTEGRAZIONE GOHIGHLEVEL ════════
-        Sostituire il blocco <div id="form-nativo"> qui sotto con l'embed GHL:
-
-        <iframe src="https://api.leadconnectorhq.com/widget/form/XXXXXXXX"
-                style="width:100%;height:640px;border:none;border-radius:12px;background:#fff"
-                id="inline-XXXXXXXX" data-layout="{'id':'INLINE'}" data-form-name="Lead Solar B2B"></iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-        Configurazione richiesta lato GHL:
-        · Form multi-step, 3 step (vedi struttura replicata sotto)
-        · Tag automatici: tipo-immobile / fascia-spesa / proprieta
-        · Pipeline «Lead Solar B2B» (separata dalla B2C)
-        · Routing: fascia-spesa «Oltre 100.000 €» → notifica diretta Direttore Efficienza/Solar
-                   fasce inferiori → coda call center
-        · Checkbox privacy GDPR obbligatoria, NON pre-spuntata; consenso marketing separato e facoltativo
-        · On submit → Redirect URL: /grazie.html
-      -->
-      <div id="form-nativo" x-data="{
-            step: 1,
-            data: { immobile:'', spesa:'', proprieta:'', nome:'', azienda:'', telefono:'', comune:'', privacy:false },
-            get canNext() {
-              if (this.step === 1) return !!this.data.immobile;
-              if (this.step === 2) return !!this.data.spesa && !!this.data.proprieta;
-              return true;
-            },
-            get canSubmit() {
-              return this.data.nome && this.data.azienda && this.data.telefono && this.data.comune && this.data.privacy;
-            }
-          }" class="bg-white text-primary rounded-2xl shadow-2xl shadow-black/25 p-6 sm:p-8">
-
-        <!-- progress -->
-        <div class="flex items-center gap-3 mb-7">
-          <template x-for="n in 3" :key="n">
-            <div class="flex-1">
-              <div class="h-1.5 rounded-full transition-colors duration-300" :class="step >= n ? 'bg-accent' : 'bg-primary/12'"></div>
-            </div>
-          </template>
-          <span class="font-mono text-[11px] text-primary/45 shrink-0 ml-1">Step <span x-text="step"></span> di 3</span>
-        </div>
-
-        <form action="/b2b/grazie.html" method="get" @submit="if(!canSubmit) $event.preventDefault()">
-
-          <!-- STEP 1 -->
-          <div x-show="step === 1">
-            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">La tua azienda</p>
-            <p class="font-bold text-lg mb-5 leading-snug">Su quale immobile stai valutando l'intervento?</p>
-            <div class="space-y-2.5">
-              <template x-for="opt in ['Capannone / opificio','Ufficio / sede direzionale','Negozio / struttura commerciale','Altro edificio aziendale']" :key="opt">
-                <label class="flex items-center gap-3 border rounded-lg px-4 py-3.5 cursor-pointer transition-colors"
-                       :class="data.immobile === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
-                  <input type="radio" name="immobile" :value="opt" x-model="data.immobile" class="accent-accent w-4 h-4 shrink-0">
-                  <span class="text-sm font-medium" x-text="opt"></span>
-                </label>
-              </template>
-            </div>
-          </div>
-
-          <!-- STEP 2 -->
-          <div x-show="step === 2" x-cloak>
-            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">Per preparare la consulenza</p>
-            <p class="font-bold text-[17px] mb-4 leading-snug">Indicativamente, quanto spende la tua azienda di energia all'anno (luce + gas)?</p>
-            <div class="space-y-2.5 mb-7">
-              <template x-for="opt in ['Meno di 10.000 €','10.000 – 30.000 €','30.000 – 100.000 €','Oltre 100.000 €']" :key="opt">
-                <label class="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer transition-colors"
-                       :class="data.spesa === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
-                  <input type="radio" name="spesa" :value="opt" x-model="data.spesa" class="accent-accent w-4 h-4 shrink-0">
-                  <span class="text-sm font-medium" x-text="opt"></span>
-                </label>
-              </template>
-            </div>
-            <p class="font-bold text-[17px] mb-4 leading-snug">L'immobile è di proprietà (dell'azienda o della famiglia)?</p>
-            <div class="space-y-2.5">
-              <template x-for="opt in ['Sì','No, in affitto','Situazione mista']" :key="opt">
-                <label class="flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer transition-colors"
-                       :class="data.proprieta === opt ? 'border-accent bg-accentsoft' : 'border-primary/15 hover:border-primary/35'">
-                  <input type="radio" name="proprieta" :value="opt" x-model="data.proprieta" class="accent-accent w-4 h-4 shrink-0">
-                  <span class="text-sm font-medium" x-text="opt"></span>
-                </label>
-              </template>
-            </div>
-          </div>
-
-          <!-- STEP 3 -->
-          <div x-show="step === 3" x-cloak>
-            <p class="font-mono text-[10px] uppercase eyebrow text-accent mb-2">Dove ti ricontattiamo</p>
-            <p class="font-bold text-lg mb-5 leading-snug">Ultimi dati e ti richiamiamo entro 24 ore lavorative</p>
-            <div class="grid sm:grid-cols-2 gap-3.5">
-              <input type="text" name="nome" x-model="data.nome" placeholder="Nome e cognome" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
-              <input type="text" name="azienda" x-model="data.azienda" placeholder="Azienda" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
-              <input type="tel" name="telefono" x-model="data.telefono" placeholder="Telefono" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
-              <input type="text" name="comune" x-model="data.comune" placeholder="Comune" required class="border border-primary/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent">
-            </div>
-            <label class="flex gap-3 items-start mt-5 cursor-pointer">
-              <input type="checkbox" name="privacy" x-model="data.privacy" required class="accent-accent w-4 h-4 mt-0.5 shrink-0">
-              <span class="text-xs text-primary/60 leading-relaxed">Ho letto e accetto l'<a href="#" class="underline hover:text-accent">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *</span>
-            </label>
-          </div>
-
-          <!-- navigazione -->
-          <div class="flex items-center gap-3 mt-7 pt-6 border-t border-primary/10">
-            <button type="button" x-show="step > 1" x-cloak @click="step--" class="text-sm font-semibold text-primary/55 hover:text-primary px-4 py-3.5 transition-colors">← Indietro</button>
-            <button type="button" x-show="step < 3" @click="if(canNext) step++" :disabled="!canNext"
-                    class="flex-1 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-lg transition-all disabled:opacity-35 disabled:cursor-not-allowed hover:bg-ink">
-              Continua →
-            </button>
-            <button type="submit" x-show="step === 3" x-cloak :disabled="!canSubmit"
-                    class="flex-1 bg-yellow text-primary font-bold text-sm px-6 py-3.5 rounded-lg transition-all disabled:opacity-35 disabled:cursor-not-allowed hover:bg-yellowdark">
-              Prenota la consulenza con l'esperto
-            </button>
-          </div>
-        </form>
-      </div>
+      <!-- ════════ FORM GOHIGHLEVEL — Lead Solar B2B ════════ -->
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/y5R5KrGLkArzgLSRF82u"
+        style="width:100%;height:667px;border:none;border-radius:12px;background:#fff"
+        id="inline-y5R5KrGLkArzgLSRF82u"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="brokerysolar.it/b2b"
+        data-height="667"
+        data-layout-iframe-id="inline-y5R5KrGLkArzgLSRF82u"
+        data-form-id="y5R5KrGLkArzgLSRF82u"
+        title="brokerysolar.it/b2b">
+      </iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
     </div>
   </div>
 </section>
