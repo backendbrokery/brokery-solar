@@ -4,15 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- iubenda — Cookie Solution (deve caricarsi prima di GTM) -->
-<script type="text/javascript" src="https://embeds.iubenda.com/widgets/2c40d66d-d0e0-4d66-ac77-a6f6885fe102.js"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KX4C6V5Z');</script>
-<!-- End Google Tag Manager -->
+  <!-- iubenda — Cookie Solution (deve caricarsi prima di GTM) -->
+  <script type="text/javascript"
+    src="https://embeds.iubenda.com/widgets/2c40d66d-d0e0-4d66-ac77-a6f6885fe102.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KX4C6V5Z');</script>
+  <!-- End Google Tag Manager -->
+  <script>
+    (function () {
+      var KEYS = ['param_ads_sede', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'gclid', 'fbclid'];
+      var qs = new URLSearchParams(location.search), store = {};
+      try { store = JSON.parse(sessionStorage.getItem('bs_params') || '{}'); } catch (e) { }
+      KEYS.forEach(function (k) { var v = qs.get(k); if (v) store[k] = v; });
+      try { sessionStorage.setItem('bs_params', JSON.stringify(store)); } catch (e) { }
+      window.BS_PARAMS = store;
+    })();
+  </script>
   <title>Brokery Solar | Taglia la bolletta fino all'80%. Installato in 30 giorni, garantito per iscritto</title>
   <meta name="description"
     content="Fotovoltaico con accumulo: taglia la bolletta fino all'80%. Installazione garantita in 30 giorni per contratto, pratiche burocratiche gestite da noi dalla A alla Z. Sopralluogo e studio di fattibilità gratuiti. Nel 2026 detrazione fino al 50% sull'abitazione principale.">
@@ -48,10 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="bg-white font-brand text-gray-900 antialiased">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX4C6V5Z"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX4C6V5Z" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <style>
     .reveal {
       opacity: 0;
@@ -138,8 +152,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       class="absolute inset-0 w-full h-full object-cover object-bottom" fetchpriority="high" decoding="async">
     <div class="absolute inset-0 brand-hero-overlay"></div>
     <div class="relative max-w-6xl mx-auto px-5 md:px-6 pt-28 md:pt-32 pb-20 md:pb-24 w-full">
-      <p class="inline-flex items-center gap-2 bg-yellow/15 border border-yellow/40 text-yellow rounded-full px-3.5 py-1.5 text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] mb-5 md:mb-6">
-        <span class="h-1.5 w-1.5 rounded-full bg-yellow"></span>Fotovoltaico con accumulo</p>
+      <p
+        class="inline-flex items-center gap-2 bg-yellow/15 border border-yellow/40 text-yellow rounded-full px-3.5 py-1.5 text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] mb-5 md:mb-6">
+        <span class="h-1.5 w-1.5 rounded-full bg-yellow"></span>Fotovoltaico con accumulo
+      </p>
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] max-w-4xl text-white">
         Taglia la bolletta fino all'80% con il fotovoltaico.<br class="hidden md:block"> <span
           class="text-yellow">Installato in 30 giorni</span>.
@@ -181,8 +197,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <p class="text-sm font-semibold leading-snug">Installazione<br><span
-            class="font-normal text-gray-500">in 30 giorni</span></p>
+        <p class="text-sm font-semibold leading-snug">Installazione<br><span class="font-normal text-gray-500">in 30
+            giorni</span></p>
       </div>
       <div class="flex flex-col items-center text-center gap-2 reveal reveal-delay-2">
         <svg class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -241,8 +257,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- SEZIONE 3 — IL PROBLEMA (agitazione) -->
   <section class="bg-secondary py-20 md:py-28 border-y border-gray-200">
     <div class="max-w-4xl mx-auto px-5 md:px-6">
-      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8 reveal text-primary">Quanto ti costa <span
-          class="text-accent">NON</span> avere il fotovoltaico?</h2>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-8 reveal text-primary">Quanto ti costa
+        <span class="text-accent">NON</span> avere il fotovoltaico?
+      </h2>
       <p class="text-lg text-primary/70 leading-relaxed mb-10 reveal">Ogni anno che passa, una famiglia media versa
         migliaia di euro al proprio fornitore di energia. Soldi che escono e non tornano. E intanto:</p>
       <div class="space-y-6">
@@ -264,7 +281,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               tua</strong> resta l'unico spazio che possiedi e che non ti produce nulla.</p>
         </div>
       </div>
-      <p class="text-xl md:text-2xl font-bold leading-snug mt-12 pt-10 border-t border-gray-200 reveal text-primary">La domanda giusta non è
+      <p class="text-xl md:text-2xl font-bold leading-snug mt-12 pt-10 border-t border-gray-200 reveal text-primary">La
+        domanda giusta non è
         «quanto costa un impianto fotovoltaico?».<br class="hidden md:block"> È <span class="text-accent">«quanto mi
           costa ogni anno non averlo?»</span></p>
     </div>
@@ -573,19 +591,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div
         class="md:col-span-7 w-full max-w-[700px] md:justify-self-end bg-white text-primary p-2 rounded-2xl shadow-xl reveal reveal-delay-1">
-        <iframe src="https://api.leadconnectorhq.com/widget/form/LiMHjwwAGcz6TI0Ck0WK"
-          style="width:100%;min-height:640px;border:none;border-radius:8px" id="inline-LiMHjwwAGcz6TI0Ck0WK"
+        <iframe data-src="https://api.leadconnectorhq.com/widget/form/7cd8WQWKUEJbt2qQEXEg"
+          style="width:100%;min-height:640px;border:none;border-radius:8px" id="inline-7cd8WQWKUEJbt2qQEXEg"
           data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
           data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
           data-deactivation-value="" data-form-name="brokerysolar.it" data-height="undefined"
-          data-layout-iframe-id="inline-LiMHjwwAGcz6TI0Ck0WK" data-form-id="LiMHjwwAGcz6TI0Ck0WK"
+          data-layout-iframe-id="inline-7cd8WQWKUEJbt2qQEXEg" data-form-id="7cd8WQWKUEJbt2qQEXEg"
           title="brokerysolar.it">
         </iframe>
+        <script>
+          (function () {
+            var f = document.getElementById('inline-7cd8WQWKUEJbt2qQEXEg');
+            var p = window.BS_PARAMS || {};
+            var u = new URL(f.getAttribute('data-src'));
+            Object.keys(p).forEach(function (k) { u.searchParams.set(k, p[k]); });
+            f.src = u.toString();
+          })();
+        </script>
       </div>
     </div>
   </section>
 
-  
+
   <!-- SEZIONE 12 — FOOTER -->
   <footer class="brand-dark border-t hairline pb-24 md:pb-0">
     <div
@@ -600,10 +627,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="text-xs md:text-right leading-relaxed">
         <p>BRK SOL SRL P.IVA IT04125210122</p>
         <p class="mt-1">Via Magatti 3, 21100 Varese (VA)</p>
-        <p class="mt-1"><a href="tel:+39800032645" class="hover:text-white transition-colors">800 032 645</a> · <a href="mailto:info@brokerysolar.it" class="hover:text-white transition-colors">info@brokerysolar.it</a></p>
-        <p class="mt-3">© 2026 · <a href="https://www.iubenda.com/privacy-policy/72459830" class="hover:text-white transition-colors" target="_blank" rel="noopener">Privacy Policy</a>
-          · <a href="https://www.iubenda.com/privacy-policy/72459830/cookie-policy" class="hover:text-white transition-colors" target="_blank" rel="noopener">Cookie Policy</a>
-          · <a href="https://www.iubenda.com/termini-e-condizioni/72459830" class="hover:text-white transition-colors" target="_blank" rel="noopener">Termini e Condizioni</a></p>
+        <p class="mt-1"><a href="tel:+39800032645" class="hover:text-white transition-colors">800 032 645</a> · <a
+            href="mailto:info@brokerysolar.it" class="hover:text-white transition-colors">info@brokerysolar.it</a></p>
+        <p class="mt-3">© 2026 · <a href="https://www.iubenda.com/privacy-policy/72459830"
+            class="hover:text-white transition-colors" target="_blank" rel="noopener">Privacy Policy</a>
+          · <a href="https://www.iubenda.com/privacy-policy/72459830/cookie-policy"
+            class="hover:text-white transition-colors" target="_blank" rel="noopener">Cookie Policy</a>
+          · <a href="https://www.iubenda.com/termini-e-condizioni/72459830" class="hover:text-white transition-colors"
+            target="_blank" rel="noopener">Termini e Condizioni</a></p>
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-5 md:px-6 pb-12">

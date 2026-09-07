@@ -1,117 +1,155 @@
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- iubenda — Cookie Solution (deve caricarsi prima di GTM) -->
-<script type="text/javascript" src="https://embeds.iubenda.com/widgets/2c40d66d-d0e0-4d66-ac77-a6f6885fe102.js"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KX4C6V5Z');</script>
-<!-- End Google Tag Manager -->
-<meta name="robots" content="noindex, nofollow">
-<title>Grazie! Richiesta ricevuta | Brokery Solar</title>
-<meta name="description" content="Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta entro 24 ore.">
-<link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
-<link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#3A4159',
-        accent: '#077FBD',
-        light: '#6FC9EB',
-        yellow: '#ffd800',
-        yellowDark: '#ffb103',
-        secondary: '#f8fafc'
-      },
-      fontFamily: { brand: ['Inter', 'Inter', 'sans-serif'] }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function () {
+      var p = {};
+      try { p = JSON.parse(sessionStorage.getItem('bs_params') || '{}'); } catch (e) { }
+      window.dataLayer.push({ sede: (p.param_ads_sede || 'varese').toLowerCase() });
+    })();
+  </script>
+  <!-- iubenda — Cookie Solution (deve caricarsi prima di GTM) -->
+  <script type="text/javascript"
+    src="https://embeds.iubenda.com/widgets/2c40d66d-d0e0-4d66-ac77-a6f6885fe102.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KX4C6V5Z');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Grazie! Richiesta ricevuta | Brokery Solar</title>
+  <meta name="description"
+    content="Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta entro 24 ore.">
+  <link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
+  <link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3A4159',
+            accent: '#077FBD',
+            light: '#6FC9EB',
+            yellow: '#ffd800',
+            yellowDark: '#ffb103',
+            secondary: '#f8fafc'
+          },
+          fontFamily: { brand: ['Inter', 'Inter', 'sans-serif'] }
+        }
+      }
     }
-  }
-}
-</script>
-<style>.hairline { border-color: rgba(248,250,252,0.14); }</style>
+  </script>
+  <style>
+    .hairline {
+      border-color: rgba(248, 250, 252, 0.14);
+    }
+  </style>
 </head>
+
 <body class="relative bg-primary font-brand text-white antialiased min-h-screen flex flex-col">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX4C6V5Z"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX4C6V5Z" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-<!-- SOFT BACKGROUND (fixed layer, does not affect scroll) -->
-<div class="fixed inset-0 overflow-hidden pointer-events-none">
-  <img src="/b2c/assets/img/hero.webp" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-50" decoding="async">
-  <div class="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/70 to-primary/90"></div>
-  <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-light/10 blur-3xl"></div>
-  <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-yellow/10 blur-3xl"></div>
-</div>
-
-<!-- HERO / CONFIRMATION -->
-<main class="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
-  <div class="max-w-2xl w-full text-center">
-    <span class="inline-flex items-center bg-white rounded-xl px-4 py-3 shadow-sm mb-12">
-      <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-8 w-auto">
-    </span>
-
-    <div class="mx-auto mb-8 flex items-center justify-center h-20 w-20 rounded-full bg-yellow">
-      <svg class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-    </div>
-
-    <p class="text-xs uppercase tracking-[0.3em] text-light mb-5">Richiesta ricevuta</p>
-    <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6">Grazie, ci siamo.</h1>
-    <p class="text-lg text-white/70 leading-relaxed max-w-xl mx-auto mb-12">
-      Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta <span class="text-white font-semibold">entro 24 ore</span>, bolletta alla mano, per dirti quanto puoi produrre e quanto puoi risparmiare — senza impegno.
-    </p>
-
-    <!-- NEXT STEPS -->
-    <div class="grid sm:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden text-left mb-12">
-      <div class="bg-white/5 backdrop-blur-sm p-6">
-        <p class="text-3xl font-black text-light mb-3">01</p>
-        <h2 class="font-bold text-sm mb-1">Ti ricontattiamo</h2>
-        <p class="text-xs text-white/60 leading-relaxed">Entro 24 ore, per fissare il check-up nei tuoi tempi.</p>
-      </div>
-      <div class="bg-white/5 backdrop-blur-sm p-6">
-        <p class="text-3xl font-black text-light mb-3">02</p>
-        <h2 class="font-bold text-sm mb-1">Check-up gratuito</h2>
-        <p class="text-xs text-white/60 leading-relaxed">Analizziamo tetto, consumi e bolletta: numeri reali, non stime a voce.</p>
-      </div>
-      <div class="bg-white/5 backdrop-blur-sm p-6">
-        <p class="text-3xl font-black text-light mb-3">03</p>
-        <h2 class="font-bold text-sm mb-1">Simulazione su misura</h2>
-        <p class="text-xs text-white/60 leading-relaxed">Risparmio, incentivi e payback sul tuo caso. Se procedi, installiamo in 30 giorni.</p>
-      </div>
-    </div>
-
-    <a href="/b2c/" class="inline-block bg-yellow text-primary font-bold px-10 py-5 text-sm uppercase tracking-[0.1em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Torna al sito</a>
-    <p class="text-xs text-white/50 mt-6">Nel frattempo, tieni a portata la tua ultima bolletta: ci servirà per i conti.</p>
+  <!-- SOFT BACKGROUND (fixed layer, does not affect scroll) -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <img src="/b2c/assets/img/hero.webp" alt="" aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover opacity-50" decoding="async">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/70 to-primary/90"></div>
+    <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-light/10 blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-yellow/10 blur-3xl"></div>
   </div>
-</main>
 
-<!-- FOOTER -->
-<footer class="relative z-10 border-t hairline">
-  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-8 text-xs text-white/45">
-    <div>
-      <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 mb-4">
-        <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 w-auto">
+  <!-- HERO / CONFIRMATION -->
+  <main class="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
+    <div class="max-w-2xl w-full text-center">
+      <span class="inline-flex items-center bg-white rounded-xl px-4 py-3 shadow-sm mb-12">
+        <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-8 w-auto">
       </span>
-      <p class="leading-relaxed max-w-md">Brokery Solar — divisione fotovoltaico ed efficienza energetica di Gruppo Brokery</p>
+
+      <div class="mx-auto mb-8 flex items-center justify-center h-20 w-20 rounded-full bg-yellow">
+        <svg class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <p class="text-xs uppercase tracking-[0.3em] text-light mb-5">Richiesta ricevuta</p>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6">Grazie, ci siamo.</h1>
+      <p class="text-lg text-white/70 leading-relaxed max-w-xl mx-auto mb-12">
+        Abbiamo ricevuto la tua richiesta di check-up gratuito. Un consulente Brokery Solar ti ricontatta <span
+          class="text-white font-semibold">entro 24 ore</span>, bolletta alla mano, per dirti quanto puoi produrre e
+        quanto puoi risparmiare — senza impegno.
+      </p>
+
+      <!-- NEXT STEPS -->
+      <div class="grid sm:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden text-left mb-12">
+        <div class="bg-white/5 backdrop-blur-sm p-6">
+          <p class="text-3xl font-black text-light mb-3">01</p>
+          <h2 class="font-bold text-sm mb-1">Ti ricontattiamo</h2>
+          <p class="text-xs text-white/60 leading-relaxed">Entro 24 ore, per fissare il check-up nei tuoi tempi.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm p-6">
+          <p class="text-3xl font-black text-light mb-3">02</p>
+          <h2 class="font-bold text-sm mb-1">Check-up gratuito</h2>
+          <p class="text-xs text-white/60 leading-relaxed">Analizziamo tetto, consumi e bolletta: numeri reali, non
+            stime a voce.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm p-6">
+          <p class="text-3xl font-black text-light mb-3">03</p>
+          <h2 class="font-bold text-sm mb-1">Simulazione su misura</h2>
+          <p class="text-xs text-white/60 leading-relaxed">Risparmio, incentivi e payback sul tuo caso. Se procedi,
+            installiamo in 30 giorni.</p>
+        </div>
+      </div>
+
+      <a href="/b2c/"
+        class="inline-block bg-yellow text-primary font-bold px-10 py-5 text-sm uppercase tracking-[0.1em] rounded-full hover:bg-yellowDark hover:-translate-y-0.5 transition-all duration-200">Torna
+        al sito</a>
+      <p class="text-xs text-white/50 mt-6">Nel frattempo, tieni a portata la tua ultima bolletta: ci servirà per i
+        conti.</p>
     </div>
-    <div class="md:text-right leading-relaxed">
-      <p>BRK SOL SRL P.IVA IT04125210122</p>
-      <p class="mt-1">Via Magatti 3, 21100 Varese (VA)</p>
-      <p class="mt-1"><a href="tel:+39800032645" class="hover:text-white transition-colors">800 032 645</a> · <a href="mailto:info@brokerysolar.it" class="hover:text-white transition-colors">info@brokerysolar.it</a></p>
-      <p class="mt-3">© 2026 · <a href="https://www.iubenda.com/privacy-policy/72459830" class="hover:text-white transition-colors" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://www.iubenda.com/privacy-policy/72459830/cookie-policy" class="hover:text-white transition-colors" target="_blank" rel="noopener">Cookie Policy</a> · <a href="https://www.iubenda.com/termini-e-condizioni/72459830" class="hover:text-white transition-colors" target="_blank" rel="noopener">Termini e Condizioni</a></p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t hairline">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-8 text-xs text-white/45">
+      <div>
+        <span class="inline-flex items-center bg-white rounded-xl px-3 py-2 mb-4">
+          <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" class="h-6 w-auto">
+        </span>
+        <p class="leading-relaxed max-w-md">Brokery Solar — divisione fotovoltaico ed efficienza energetica di Gruppo
+          Brokery</p>
+      </div>
+      <div class="md:text-right leading-relaxed">
+        <p>BRK SOL SRL P.IVA IT04125210122</p>
+        <p class="mt-1">Via Magatti 3, 21100 Varese (VA)</p>
+        <p class="mt-1"><a href="tel:+39800032645" class="hover:text-white transition-colors">800 032 645</a> · <a
+            href="mailto:info@brokerysolar.it" class="hover:text-white transition-colors">info@brokerysolar.it</a></p>
+        <p class="mt-3">© 2026 · <a href="https://www.iubenda.com/privacy-policy/72459830"
+            class="hover:text-white transition-colors" target="_blank" rel="noopener">Privacy Policy</a> · <a
+            href="https://www.iubenda.com/privacy-policy/72459830/cookie-policy"
+            class="hover:text-white transition-colors" target="_blank" rel="noopener">Cookie Policy</a> · <a
+            href="https://www.iubenda.com/termini-e-condizioni/72459830" class="hover:text-white transition-colors"
+            target="_blank" rel="noopener">Termini e Condizioni</a></p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
