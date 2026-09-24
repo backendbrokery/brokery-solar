@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="/js/bs-tracking.js"></script>
+
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -16,21 +18,6 @@
     })(window, document, 'script', 'dataLayer', 'GTM-KX4C6V5Z');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Params capture -->
-  <script>
-    (function () {
-      var KEYS = ['param_ads_sede', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'wbraid', 'gbraid'];
-      var qs = new URLSearchParams(location.search);
-      var store = {};
-      try { store = JSON.parse(sessionStorage.getItem('bs_params') || '{}'); } catch (e) { }
-      KEYS.forEach(function (k) {
-        var v = qs.get(k);
-        if (v) store[k] = String(v).trim().toLowerCase();
-      });
-      try { sessionStorage.setItem('bs_params', JSON.stringify(store)); } catch (e) { }
-      window.BS_PARAMS = store;
-    })();
-  </script>
   <title>Fotovoltaico industriale Monza e Brianza | Brokery Solar — Incentivi 2026 per le imprese</title>
   <meta name="description"
     content="Il tuo capannone può iniziare a pagarsi l'energia da solo. Contributi a fondo perduto GSE fino al 50% con l'intervento integrato pompa di calore + fotovoltaico, oppure iperammortamento 2026. Analisi energetica e studio incentivi gratuiti.">
@@ -752,30 +739,15 @@
 
       <div class="lg:col-span-8">
         <!-- ════════ FORM GOHIGHLEVEL — Lead Solar B2B ════════ -->
-        <iframe data-src="https://api.leadconnectorhq.com/widget/form/NmPRHTFJO1FqiIhzYc3C"
-          style="width:100%;min-height:667px;border:none;border-radius:12px;background:#fff"
-          id="inline-NmPRHTFJO1FqiIhzYc3C" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow"
-          data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value=""
-          data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="brokerysolar.it"
-          data-height="undefined" data-layout-iframe-id="inline-NmPRHTFJO1FqiIhzYc3C"
-          data-form-id="NmPRHTFJO1FqiIhzYc3C" title="brokerysolar.it">
+        <iframe src="https://br.brokery.it/widget/form/NmPRHTFJO1FqiIhzYc3C"
+          style="width:100%;height:100%;border:none;border-radius:8px" id="inline-NmPRHTFJO1FqiIhzYc3C"
+          data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+          data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+          data-deactivation-value="" data-form-name="brokerysolar.it/b2b" data-height="801"
+          data-layout-iframe-id="inline-NmPRHTFJO1FqiIhzYc3C" data-form-id="NmPRHTFJO1FqiIhzYc3C"
+          data-cookie-consent="true" data-cookie-consent-provider="auto" title="brokerysolar.it/b2b">
         </iframe>
-        <script>
-          (function () {
-            var f = document.getElementById('inline-NmPRHTFJO1FqiIhzYc3C');
-            if (!f || f.src) return;
-            var src = f.getAttribute('data-src');
-            if (!src) return;
-            var p = window.BS_PARAMS || {};
-            try {
-              var u = new URL(src);
-              Object.keys(p).forEach(function (k) { u.searchParams.set(k, p[k]); });
-              f.src = u.toString();
-            } catch (e) {
-              f.src = src;
-            }
-          })();
-        </script>
+        <script src="https://br.brokery.it/js/form_embed.js"></script>
       </div>
     </div>
   </section>
@@ -824,7 +796,6 @@
   </div>
   <div class="sm:hidden h-20"></div>
 
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 
 </html>
