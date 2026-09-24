@@ -4,6 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NWF7C8K9');</script>
+  <!-- End Google Tag Manager -->
+
+  <script>
+    (function () {
+      if (new URLSearchParams(location.search).get('lead') !== 'ok') return;
+      if (!sessionStorage.getItem('lead_tracked')) {
+        sessionStorage.setItem('lead_tracked', '1');
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({ event: 'generate_lead' });
+      }
+      history.replaceState(null, '', location.pathname);
+    })();
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     (function () {
@@ -12,7 +36,7 @@
       window.dataLayer.push({ sede: (p.param_ads_sede || 'varese').toLowerCase() });
     })();
   </script>
-  
+
   <meta name="robots" content="noindex, nofollow">
   <title>Grazie! Richiesta ricevuta | Brokery Solar</title>
   <meta name="description"
@@ -49,6 +73,10 @@
 </head>
 
 <body class="relative bg-primary font-brand text-white antialiased min-h-screen flex flex-col">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWF7C8K9" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- SOFT BACKGROUND (fixed layer, does not affect scroll) -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none">
