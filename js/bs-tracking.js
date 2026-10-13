@@ -1,4 +1,4 @@
-/*! bs-tracking.js — cattura parametri, li passa ai form GHL, carica l'embed, traccia il lead */
+/*! bs-tracking.js — cattura parametri, li passa ai form GHL, carica l'embed, traccia lead e click_to_call */
 (function () {
   'use strict';
 
@@ -75,4 +75,19 @@
     u.searchParams.delete('lead');
     history.replaceState(history.state, '', u.pathname + u.search + u.hash);
   }
+
+  // 4. Click sui numeri di telefono
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    var data = {
+      event: 'click_to_call',
+      phone_number: a.getAttribute('href').replace(/^tel:/, ''),
+      cta_position: a.getAttribute('data-cta') || '',
+      landing: location.pathname.replace(/^\/|\/$/g, '') || 'home'
+    };
+    if (store.param_ads_sede) data.sede = store.param_ads_sede;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(data);
+  }, true);
 })();
