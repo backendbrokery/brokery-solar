@@ -161,7 +161,7 @@
   <header id="hero" class="md:px-6 md:pt-6 md:pb-12">
     <div class="relative max-w-6xl mx-auto md:grid md:grid-cols-12 md:items-center">
       <figure class="relative h-[clamp(356px,min(calc(100svh-290px),126vw),640px)] md:h-[min(86vh,860px)] md:min-h-[680px] md:col-start-5 md:col-span-8 md:row-start-1 md:rounded-[2rem] overflow-hidden">
-        <img src="/b2c-v2/img/hero-casa.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1300" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom md:object-center">
+        <img src="/b2c-v2/img/hero-casa.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1300" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom">
         <svg id="hero-svg" viewBox="0 0 1024 1300" preserveAspectRatio="xMidYMax slice" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
           <defs>
             <linearGradient id="luceRaggio" gradientUnits="userSpaceOnUse" x1="968" y1="420" x2="500" y2="850"><stop offset="0" stop-color="#fff6d8" stop-opacity=".05"/><stop offset=".6" stop-color="#fff6d8" stop-opacity=".18"/><stop offset="1" stop-color="#fff6d8" stop-opacity=".4"/></linearGradient>
@@ -230,7 +230,7 @@
   <script>
     (function () {
       var svg = document.getElementById('hero-svg'), mq = window.matchMedia('(min-width: 768px)');
-      function allinea() { svg.setAttribute('preserveAspectRatio', mq.matches ? 'xMidYMid slice' : 'xMidYMax slice'); }
+      function allinea() { svg.setAttribute('preserveAspectRatio', 'xMidYMax slice'); }
       allinea(); mq.addEventListener ? mq.addEventListener('change', allinea) : mq.addListener(allinea);
     })();
   </script>
