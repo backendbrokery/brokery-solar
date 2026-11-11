@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotovoltaico con accumulo: metà della spesa ti torna indietro | Brokery Solar</title>
+  <meta name="description" content="Fotovoltaico con accumulo in Lombardia: detrazione fino al 50% in 10 anni per i pagamenti entro il 31 dicembre 2026, impianto acceso entro 30 giorni dalla data concordata, scritto nel contratto. Sopralluogo gratuito.">
+  <meta property="og:title" content="Fotovoltaico con accumulo: metà della spesa ti torna indietro.">
+  <meta property="og:description" content="Detrazione fino al 50% in 10 anni. Impianto acceso entro 30 giorni, scritto nel contratto. Sopralluogo gratuito.">
+  <meta property="og:image" content="/b2c/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="../b2c/assets/IconSolar.png">
+  <link rel="apple-touch-icon" href="../b2c/assets/IconSolar.png">
+  <link rel="preload" as="image" href="img/hero-casa-verticale.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Schibsted+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3A4159',
+            navy: '#262C40',
+            accent: '#077FBD',
+            light: '#6FC9EB',
+            yellow: '#ffd800',
+            yellowDark: '#ffb103',
+            nebbia: '#F4F6F8',
+            cielo: '#EEF6FB'
+          },
+          fontFamily: {
+            brand: ['Inter', 'sans-serif'],
+            display: ['"Schibsted Grotesk"', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    [x-cloak] { display: none !important; }
+    .num { font-family: Inter, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; }
+    body h1, body h2 { font-family: "Schibsted Grotesk", Inter, sans-serif; font-weight: 800; letter-spacing: -0.025em; line-height: 1.06; }
+
+    /* Gesto ricorrente: l'evidenziatore giallo */
+    mark, .evid {
+      color: inherit;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 24' preserveAspectRatio='none'%3E%3Cpath d='M3 9C50 4 140 2 197 6c2 5 1 10-2 14-65-3-125-1-189 2-4-4-5-9-3-13z' fill='%23ffd800'/%3E%3C/svg%3E") no-repeat 0 95% / 100% .5em;
+      -webkit-box-decoration-break: clone; box-decoration-break: clone;
+      padding: 0 .02em; margin: 0 -.02em;
+    }
+    .scuro mark { color: #fff; background-size: 100% .3em; background-position: 0 100%; }
+
+    .cta { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; background: #ffd800; color: #262C40; font-weight: 800; border-radius: .9rem; padding: 1rem 1.5rem; white-space: nowrap; transition: background-color .15s; }
+    .cta:hover { background: #ffb103; }
+    /* Header: su mobile sfuma nella foto */
+    @media (max-width: 767px) { .testata { background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.75) 55%, rgba(255,255,255,0) 100%); padding-bottom: 18px; } }
+    .soft { box-shadow: 0 1px 2px rgba(38,44,64,.05), 0 20px 40px -20px rgba(38,44,64,.25); }
+
+    .foglio { background: #fff; border: 1px solid rgba(38,44,64,.12); box-shadow: 0 1px 0 rgba(38,44,64,.04), 0 18px 40px -24px rgba(38,44,64,.35); }
+    .tratteggio { border-top: 1px dashed rgba(38,44,64,.25); }
+
+    /* Calcolatore: binario a colori e cursore */
+    .slider { -webkit-appearance: none; appearance: none; height: 14px; border-radius: 99px; background: linear-gradient(90deg, #1F9D55 0%, #077FBD 25%, #E07800 60%, #D93025 100%); outline: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 6px solid var(--liv, #077FBD); box-shadow: 0 4px 14px -4px rgba(38,44,64,.5); cursor: pointer; transition: border-color .3s, transform .15s; }
+    .slider::-webkit-slider-thumb:active { transform: scale(1.12); }
+    .slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 6px solid var(--liv, #077FBD); box-shadow: 0 4px 14px -4px rgba(38,44,64,.5); cursor: pointer; }
+    .slider:focus-visible { box-shadow: 0 0 0 4px rgba(7,127,189,.25); }
+    .avviso { animation: avviso 1.2s ease-in-out infinite; }
+    @keyframes avviso { 50% { transform: scale(1.18); } }
+    @media (prefers-reduced-motion: reduce) { .avviso { animation: none; } }
+    input[type=range] { accent-color: #077FBD; }
+    /* Segno distintivo: il ricalco giallo del campo di pannelli */
+    .ricalco * { vector-effect: non-scaling-stroke; }
+    .ricalco .r { fill: none; stroke: #ffd800; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: disegna 1.6s .2s cubic-bezier(.5,0,.2,1) forwards; }
+    .ricalco .c { fill: none; stroke: #ffd800; stroke-width: 1.5; stroke-dasharray: 4 5; opacity: 0; animation: compari .6s 1.4s forwards; }
+    .ricalco .g { fill: none; stroke: #ffd800; stroke-width: 1.25; opacity: 0; animation: compari .5s ease-out forwards; }
+    .ricalco .v { fill: #262C40; stroke: #ffd800; stroke-width: 2; opacity: 0; animation: compari .4s 1.5s forwards; }
+    /* Animazioni continue del hero: luce che scende, flusso verso l'accumulo */
+    .raggio { animation: respiro 5s ease-in-out infinite; }
+    @keyframes respiro { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+    .flusso { fill: none; stroke: #ffd800; stroke-width: 4.5; stroke-linecap: round; stroke-dasharray: 1 10; animation: scorre 1s linear infinite; vector-effect: non-scaling-stroke; }
+    @keyframes scorre { to { stroke-dashoffset: -24; } }
+    .carica { transform-box: fill-box; transform-origin: left center; animation: carica 3.2s ease-in-out infinite; }
+    @keyframes carica { 0% { transform: scaleX(.25); } 70%, 100% { transform: scaleX(1); } }
+    .alone-batt { fill: none; stroke: #ffd800; stroke-width: 3; vector-effect: non-scaling-stroke; animation: pulsa 2.4s ease-in-out infinite; }
+    @keyframes pulsa { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+    .batteria { opacity: 0; animation: compari .6s 1.8s forwards; }
+    @keyframes disegna { to { stroke-dashoffset: 0; } }
+    @keyframes compari { to { opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) { .ricalco .r { animation: none; stroke-dashoffset: 0; } .ricalco .c, .ricalco .v, .ricalco .g { animation: none; opacity: .9; } .raggio { animation: none; opacity: .9; } .flusso, .carica, .alone-batt { animation: none; } .batteria { animation: none; opacity: 1; } }
+    .barra { transition: width 1.3s cubic-bezier(.2,.7,.2,1); }
+    .arco { transition: stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+      // Grafici: le barre si riempiono e i numeri contano quando entrano nello schermo
+      var fermo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var fmt = function (n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); };
+      var grafici = document.querySelectorAll('.conta');
+      if (fermo || !('IntersectionObserver' in window)) return;
+      grafici.forEach(function (g) {
+        g.querySelectorAll('[data-w]').forEach(function (b) { b.style.width = (b.dataset.da || 0) + '%'; });
+        g.querySelectorAll('[data-conta]').forEach(function (n) { n.textContent = fmt(n.dataset.da || 0); });
+        g.querySelectorAll('[data-arco]').forEach(function (c) { c.style.strokeDashoffset = 326.7; });
+      });
+      var go = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          go.unobserve(e.target);
+          e.target.querySelectorAll('[data-w]').forEach(function (b) { requestAnimationFrame(function () { b.style.width = b.dataset.w + '%'; }); });
+          e.target.querySelectorAll('[data-arco]').forEach(function (c) { requestAnimationFrame(function () { c.style.strokeDashoffset = 326.7 * (1 - c.dataset.arco); }); });
+          e.target.querySelectorAll('[data-conta]').forEach(function (n) {
+            var da = +(n.dataset.da || 0), a = +n.dataset.conta, t0 = null;
+            (function passo(t) {
+              if (!t0) t0 = t;
+              var k = Math.min(1, (t - t0) / 1300), e2 = 1 - Math.pow(1 - k, 3);
+              n.textContent = fmt(da + (a - da) * e2);
+              if (k < 1) requestAnimationFrame(passo);
+            })(performance.now());
+          });
+        });
+      }, { threshold: 0.35 });
+      grafici.forEach(function (g) { go.observe(g); });
+    });
+  </script>
+</head>
+
+<body class="bg-white font-brand text-primary antialiased"
+  x-data="{ get giorni() { return Math.max(0, Math.ceil((new Date(2026, 11, 31, 23, 59, 59) - new Date()) / 86400000)) } }">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- TOP BAR -->
+  <div class="testata absolute md:sticky top-0 inset-x-0 z-50 md:bg-white/90 md:backdrop-blur md:border-b md:border-primary/5">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between h-14 md:h-16">
+      <img src="../b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" class="h-6 md:h-7 w-auto">
+      <a href="tel:+39800032645" data-cta="tel-header" class="inline-flex items-center gap-2 text-sm font-semibold text-navy border border-primary/15 hover:border-accent hover:text-accent px-3.5 py-1.5 rounded-xl transition-colors">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.97.757l1 4a1 1 0 01-.29.98l-1.6 1.6a14 14 0 006.08 6.08l1.6-1.6a1 1 0 01.98-.29l4 1a1 1 0 01.757.97V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+        <span class="num">800 032 645</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 1. HERO: immagine della casa + scheda sovrapposta (mobile: la scheda sale come un foglio).
+       Segno distintivo: il ricalco giallo dei moduli sul tetto.
+       L'immagine è un'illustrazione generata, non una foto di un nostro cantiere: niente etichetta "foto reale". -->
+  <header id="hero" class="md:px-6 md:pt-6 md:pb-12">
+    <div class="relative max-w-6xl mx-auto md:grid md:grid-cols-12 md:items-center">
+      <figure class="relative h-[clamp(356px,calc(100svh-324px),536px)] md:h-[min(86vh,860px)] md:min-h-[680px] md:col-start-5 md:col-span-8 md:row-start-1 md:rounded-[2rem] overflow-hidden">
+        <img src="img/hero-casa-verticale.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1536" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom md:object-center">
+        <svg id="hero-svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
+          <defs>
+            <linearGradient id="luceRaggio" gradientUnits="userSpaceOnUse" x1="968" y1="420" x2="500" y2="850"><stop offset="0" stop-color="#fff6d8" stop-opacity=".05"/><stop offset=".6" stop-color="#fff6d8" stop-opacity=".18"/><stop offset="1" stop-color="#fff6d8" stop-opacity=".4"/></linearGradient>
+          </defs>
+          <g>
+            <polygon class="raggio" points="968,420 330,775 380,770" fill="url(#luceRaggio)"/>
+            <polygon class="raggio" points="968,420 470,755 520,752" fill="url(#luceRaggio)"/>
+            <polygon class="raggio" points="968,420 610,742 660,738" fill="url(#luceRaggio)"/>
+            <polygon class="raggio" points="968,420 420,880 470,874" fill="url(#luceRaggio)"/>
+            <polygon class="raggio" points="968,420 600,858 650,852" fill="url(#luceRaggio)"/>
+          </g>
+          <!-- flusso dai pannelli alla batteria vera sul muro -->
+          <path class="flusso" d="M392 924 C 396 975, 425 1000, 437 1038"/>
+          <rect class="alone-batt" x="408" y="1036" width="60" height="110" rx="10"/>
+          <g class="batteria" transform="translate(482 1040) scale(1.35)">
+            <rect width="238" height="78" rx="39" fill="#fff" fill-opacity=".95"/>
+            <circle cx="39" cy="39" r="24" fill="#ffd800"/>
+            <path d="M42 22 L30 42 L39 42 L35 56 L49 34 L40 34 Z" fill="#262C40"/>
+            <text x="74" y="36" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#262C40">Accumulo</text>
+            <rect x="74" y="47" width="140" height="12" rx="6" fill="#EEF6FB"/>
+            <rect class="carica" x="74" y="47" width="140" height="12" rx="6" fill="#ffd800"/>
+          </g>
+          <g class="ricalco">
+            <path class="r" d="M307 760 L700 722 L752 784 L340 830 Z"/>
+            <path class="r" style="animation-delay:.3s" d="M342 836 L756 790 L810 852 L378 920 Z"/>
+            <path class="g" style="animation-delay:1.00s" d="M370 754 L407 823"/>
+            <path class="g" style="animation-delay:1.05s" d="M430 748 L470 815"/>
+            <path class="g" style="animation-delay:1.10s" d="M488 742 L529 809"/>
+            <path class="g" style="animation-delay:1.15s" d="M545 737 L587 802"/>
+            <path class="g" style="animation-delay:1.20s" d="M598 732 L640 797"/>
+            <path class="g" style="animation-delay:1.25s" d="M650 727 L693 791"/>
+            <path class="g" style="animation-delay:1.30s" d="M407 829 L450 909"/>
+            <path class="g" style="animation-delay:1.35s" d="M472 822 L521 898"/>
+            <path class="g" style="animation-delay:1.40s" d="M534 815 L581 888"/>
+            <path class="g" style="animation-delay:1.45s" d="M594 808 L640 879"/>
+            <path class="g" style="animation-delay:1.50s" d="M650 802 L697 871"/>
+            <path class="g" style="animation-delay:1.55s" d="M706 796 L753 862"/>
+            <circle class="v" cx="307" cy="760" r="6"/>
+            <circle class="v" cx="700" cy="722" r="6"/>
+            <circle class="v" cx="752" cy="784" r="6"/>
+            <circle class="v" cx="810" cy="852" r="6"/>
+            <circle class="v" cx="378" cy="920" r="6"/>
+            <circle class="v" cx="340" cy="830" r="6"/>
+          </g>
+        </svg>
+        <div class="absolute left-3 bottom-[52px] md:left-auto md:bottom-auto md:top-6 md:right-6 flex flex-col items-start md:items-end gap-1.5">
+          <span class="pl-1 text-[10px] md:text-[11px] font-medium text-white/50 [text-shadow:0_1px_2px_rgba(0,0,0,.55)]">Immagine illustrativa</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur text-navy text-[12px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-sm"><svg class="h-3.5 w-3.5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6zm0 8.2A2.2 2.2 0 1 1 10 5.8a2.2 2.2 0 0 1 0 4.4z"/></svg>Lombardia</span>
+            <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur text-navy text-[12px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-sm"><svg class="h-3.5 w-3.5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M7.6 13.2 4.4 10l-1.2 1.2 4.4 4.4 9.2-9.2-1.2-1.2z"/></svg>Sopralluogo gratuito</span>
+          </div>
+        </div>
+      </figure>
+
+      <div class="relative z-10 -mt-10 md:mt-0 md:col-start-1 md:col-span-6 md:row-start-1"><div>
+        <div class="bg-white rounded-t-[1.75rem] md:rounded-[1.75rem] px-5 pt-5 pb-7 md:p-10 shadow-[0_-10px_30px_-18px_rgba(38,44,64,.35)] md:shadow-[0_30px_60px_-25px_rgba(38,44,64,.45)]">
+          <h1 class="text-[1.9rem] md:text-[2.7rem] text-navy">Fotovoltaico con accumulo: <mark>metà della spesa</mark> ti torna indietro.</h1>
+          <p class="mt-2.5 text-[15px] md:text-lg leading-snug text-primary/80">Detrazione fino al 50% in 10 anni¹. Acceso entro 30 giorni, scritto nel contratto.</p>
+          <a href="#modulo" data-cta="hero" class="cta mt-5 md:mt-7 w-full text-base md:text-lg">Prenota il sopralluogo gratuito <span aria-hidden="true">→</span></a>
+          <p class="mt-3 text-center md:text-left text-[12px] md:text-sm text-primary/60">Ti richiamiamo entro 24 ore · 100.000+ clienti</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </header>
+  <script>
+    (function () {
+      var svg = document.getElementById('hero-svg'), mq = window.matchMedia('(min-width: 768px)');
+      function allinea() { svg.setAttribute('preserveAspectRatio', mq.matches ? 'xMidYMid slice' : 'xMidYMax slice'); }
+      allinea(); mq.addEventListener ? mq.addEventListener('change', allinea) : mq.addListener(allinea);
+    })();
+  </script>
+
+  <!-- 2. CALCOLATORE: il colore e l'avviso cambiano con la spesa (solo moltiplicazioni, nessun invio) -->
+  <section class="bg-white pt-12 md:pt-16 px-3 md:px-6">
+    <div class="soft max-w-4xl mx-auto rounded-[1.75rem] border border-primary/10 bg-white overflow-hidden"
+      x-data="{
+        mese: 150, usato: false,
+        livelli: [
+          { da: 0,   c: '#1F9D55', bg: '#EAF7EF', tag: 'Spesa contenuta', msg: 'Al sopralluogo ti diciamo con onestà se l\'impianto conviene anche a te.' },
+          { da: 120, c: '#077FBD', bg: '#EEF6FB', tag: 'Come una famiglia di 4', msg: 'È la spesa del nostro esempio: con fotovoltaico e accumulo scendeva a circa 400 € l\'anno.' },
+          { da: 200, c: '#E07800', bg: '#FFF4E5', tag: 'Spesa alta', msg: 'Ogni anno escono più di 2.400 € verso il fornitore. Vale la pena fare due conti.' },
+          { da: 320, c: '#D93025', bg: '#FDECEA', tag: 'Spesa molto alta', msg: 'Più di 3.800 € l\'anno in bolletta. Qui ogni mese di attesa pesa davvero.' }
+        ],
+        get liv() { let l = this.livelli[0]; for (const x of this.livelli) if (this.mese >= x.da) l = x; return l },
+        get pct() { return (this.mese - 40) / (500 - 40) * 100 },
+        eur(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €' },
+        segna() { if (!this.usato) { this.usato = true; (window.dataLayer = window.dataLayer || []).push({ event: 'calcolatore_usato' }) } }
+      }" :style="'--liv:' + liv.c">
+      <div class="p-5 md:p-8">
+        <div class="flex items-start justify-between gap-3">
+          <label for="mese" class="font-display font-extrabold text-xl md:text-2xl text-navy">Quanto paghi di luce al mese?</label>
+          <span class="num font-black text-2xl md:text-3xl whitespace-nowrap rounded-2xl px-3 py-1 text-white transition-colors duration-300" :style="'background:' + liv.c" x-text="eur(mese)"></span>
+        </div>
+        <input id="mese" type="range" min="40" max="500" step="10" x-model.number="mese" @input="segna()" class="slider w-full mt-6" :style="'--p:' + pct + '%'" aria-label="Bolletta della luce al mese in euro">
+        <div class="mt-1 flex justify-between text-[11px] text-primary/50 num"><span>40 €</span><span>500 €</span></div>
+      </div>
+
+      <div class="px-5 md:px-8 py-5 md:py-7 transition-colors duration-300" :style="'background:' + liv.bg">
+        <p class="inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider transition-colors duration-300" :style="'color:' + liv.c">
+          <svg x-show="liv.da < 200" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm-1 11.4-3.2-3.2 1.2-1.2 2 2 4.6-4.6 1.2 1.2z"/></svg>
+          <svg x-show="liv.da >= 200" x-cloak class="h-4 w-4 avviso" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2 1 18h18L10 2zm-1 6h2v5H9V8zm0 6.5h2v2H9v-2z"/></svg>
+          <span x-text="liv.tag"></span>
+        </p>
+        <p class="mt-2 text-sm text-primary/70">In 25 anni, la vita di un impianto, versi al fornitore:</p>
+        <p class="num font-black text-[2.8rem] md:text-6xl leading-none mt-1 transition-colors duration-300" :style="'color:' + liv.c" x-text="eur(mese * 300)"></p>
+        <div class="mt-4 grid grid-cols-2 gap-3 num">
+          <div class="rounded-2xl bg-white/80 px-4 py-3"><p class="text-[11px] uppercase tracking-wider text-primary/55 font-semibold">In 1 anno</p><p class="font-extrabold text-lg text-navy" x-text="eur(mese * 12)"></p></div>
+          <div class="rounded-2xl bg-white/80 px-4 py-3"><p class="text-[11px] uppercase tracking-wider text-primary/55 font-semibold">In 10 anni</p><p class="font-extrabold text-lg text-navy" x-text="eur(mese * 120)"></p></div>
+        </div>
+        <p class="mt-4 text-[15px] font-medium text-navy" x-text="liv.msg" aria-live="polite"></p>
+        <a href="#modulo" data-cta="calcolatore" class="cta w-full md:w-auto mt-5">Scopri quanto ne risparmi tu <span aria-hidden="true">→</span></a>
+        <p class="mt-3 text-xs text-primary/55">Calcolo alle tariffe di oggi, senza rincari. Il tuo risparmio vero lo calcoliamo al sopralluogo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 50% CONTRO 36% (sezione scura) -->
+  <section class="scuro bg-navy text-white mt-14 md:mt-20 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div class="min-w-0">
+        <h2 class="text-3xl md:text-5xl">Il 50% vale fino al <mark>31 dicembre</mark>. Poi scende.</h2>
+        <p class="mt-4 text-base md:text-lg text-white/75 max-w-lg">Sopralluogo, progetto e pratiche richiedono settimane. Chi vuole le condizioni 2026 deve partire adesso, non a metà dicembre.</p>
+        <p class="mt-7 inline-flex items-baseline gap-3 rounded-2xl bg-white/10 px-5 py-3" x-show="giorni > 0" x-cloak>
+          <span class="num font-black text-4xl text-yellow" x-text="giorni"></span><span class="text-sm text-white/80">giorni al 31 dicembre</span>
+        </p>
+        <div><a href="#modulo" data-cta="scadenza" class="cta mt-6 w-full sm:w-auto">Prenota il sopralluogo gratuito <span aria-hidden="true">→</span></a></div>
+      </div>
+      <figure class="min-w-0 conta" role="img" aria-label="Ogni 10.000 euro spesi recuperi 5.000 euro se paghi entro il 31 dicembre 2026, 3.600 euro dal 2027">
+        <p class="text-base md:text-lg text-white/80">Su <strong class="text-white">10.000 €</strong> di impianto, in 10 anni ti tornano:</p>
+        <div class="mt-6 grid grid-cols-2 gap-4 md:gap-8">
+          <div class="text-center">
+            <div class="relative mx-auto w-full max-w-[200px] aspect-square">
+              <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="12"/>
+                <circle class="arco" data-arco=".5" cx="60" cy="60" r="52" fill="none" stroke="#ffd800" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="163.4"/>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <p class="num font-black text-[1.7rem] md:text-4xl leading-none text-yellow"><span data-conta="5000">5.000</span> €</p>
+                <p class="mt-1 text-xs md:text-sm text-white/70">50%</p>
+              </div>
+            </div>
+            <p class="mt-3 font-semibold text-sm md:text-base">Se paghi entro il 31/12/2026</p>
+          </div>
+          <div class="text-center">
+            <div class="relative mx-auto w-full max-w-[200px] aspect-square">
+              <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="12"/>
+                <circle class="arco" data-arco=".36" cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="209.1"/>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <p class="num font-black text-[1.7rem] md:text-4xl leading-none text-white/60"><span data-conta="3600">3.600</span> €</p>
+                <p class="mt-1 text-xs md:text-sm text-white/50">36%</p>
+              </div>
+            </div>
+            <p class="mt-3 text-sm md:text-base text-white/65">Dal 2027 (prevista)</p>
+          </div>
+        </div>
+        <p class="mt-8 text-lg md:text-xl text-center md:text-left">Aspettare il 2027 ti costa <mark class="num font-black text-2xl md:text-3xl whitespace-nowrap"><span data-conta="1400">1.400</span> €</mark></p>
+        <figcaption class="mt-4 text-xs text-white/50 text-center md:text-left">Esempio su 10.000 € di spesa. Detrazione IRPEF sull'abitazione principale, in 10 rate annuali¹.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. ACCUMULO + BOLLETTA PRIMA/DOPO -->
+  <section class="bg-nebbia py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="md:grid md:grid-cols-12 md:gap-12 md:items-end">
+        <div class="md:col-span-7">
+          <h2 class="text-3xl md:text-5xl text-navy">Con la batteria, il sole lo usi <mark>anche di sera</mark>.</h2>
+          <p class="mt-4 text-base md:text-lg text-primary/75">Di giorno i pannelli producono, la batteria accumula quello che non consumi. Di sera lo usi tu, invece di regalarlo alla rete. È lì che la bolletta scende davvero.</p>
+        </div>
+        <figure class="hidden md:block md:col-span-5">
+          <img src="../b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="w-full h-56 object-cover rounded-xl">
+        </figure>
+      </div>
+
+      <!-- Spesa annua: esempio -->
+      <figure class="mt-10 bg-white soft rounded-[1.5rem] p-5 md:p-8 conta" role="img" aria-label="Esempio: spesa luce annua ~1.800 euro senza impianto; con fotovoltaico e accumulo paghi ~400 euro e ~1.400 euro restano a te">
+        <div class="flex items-start justify-between gap-3">
+          <p class="font-display font-extrabold text-xl md:text-2xl text-navy">Quanto spendi di luce in un anno</p>
+          <span class="text-[11px] font-semibold text-primary/50 bg-nebbia rounded-full px-2.5 py-1">Esempio</span>
+        </div>
+        <p class="mt-4 flex items-baseline gap-2 flex-wrap">
+          <span class="text-sm text-primary/70">Oggi, senza impianto:</span>
+          <span class="num font-black text-2xl md:text-3xl text-primary/50">~1.800 €</span>
+        </p>
+        <p class="mt-5 text-sm font-semibold text-navy">Con fotovoltaico + accumulo, quei 1.800 € diventano:</p>
+        <div class="mt-2.5 h-5 md:h-6 flex gap-[3px] rounded-full overflow-hidden">
+          <div class="w-[22%] bg-accent"></div>
+          <div class="flex-1 bg-nebbia relative"><div class="barra absolute inset-y-0 left-0 bg-yellow" data-w="100" style="width:100%"></div></div>
+        </div>
+        <div class="mt-4 grid grid-cols-[auto_1fr] gap-x-6 items-end">
+          <div><p class="flex items-center gap-1.5 text-xs md:text-sm font-semibold text-primary/70"><span class="h-2.5 w-2.5 rounded-full bg-accent"></span>Ancora in bolletta</p><p class="num font-black text-2xl md:text-3xl text-navy mt-0.5 whitespace-nowrap">~400 €</p></div>
+          <div class="text-right"><p class="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold text-navy"><span class="h-2.5 w-2.5 rounded-full bg-yellow"></span>Risparmiati</p><p class="num font-black text-4xl md:text-5xl text-navy mt-0.5 whitespace-nowrap">~<span data-conta="1400">1.400</span> €</p></div>
+        </div>
+        <p class="mt-4 text-sm md:text-base text-primary/75">In pratica risparmi <strong class="text-navy">quasi 4 euro su 5</strong> di quello che paghi oggi.</p>
+      </figure>
+      <p class="mt-4 text-xs text-primary/55">Esempio di dimensionamento: famiglia di 4 persone, villetta con tetto a falda, impianto 6 kW con accumulo 10 kWh. Simulazione illustrativa: il risparmio dipende da consumi, tetto e abitudini.</p>
+    </div>
+  </section>
+
+  <!-- 5. IL DOPO-FIRMA -->
+  <section class="pt-14 pb-10 md:pt-24 md:pb-14">
+    <div class="max-w-4xl mx-auto px-4 md:px-6">
+      <div>
+        <h2 class="text-3xl md:text-5xl text-navy">Il problema non è il preventivo. È <mark>il dopo-firma</mark>.</h2>
+        <p class="mt-4 text-base md:text-lg text-primary/75">Mesi di attesa, telefonate senza risposta, cantieri che non partono. Noi facciamo il contrario: prima organizziamo, poi firmiamo. Per questo la data la mettiamo nel contratto.</p>
+        <ul class="mt-7 divide-y divide-primary/10 border-y border-primary/10 md:grid md:grid-cols-2 md:gap-x-10 md:divide-y-0">
+          <li class="py-4 flex gap-4"><span class="num font-black text-accent text-lg w-8 shrink-0">30</span><p><strong class="text-navy">Giorni nel contratto.</strong> <span class="text-primary/70">Dalla data concordata all'impianto acceso.</span></p></li>
+          <li class="py-4 flex gap-4"><svg class="h-6 w-6 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><p class="pl-2"><strong class="text-navy">Pratiche a carico nostro.</strong> <span class="text-primary/70">Connessione alla rete, comunicazioni, documenti per la detrazione.</span></p></li>
+          <li class="py-4 flex gap-4"><svg class="h-6 w-6 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><p class="pl-2"><strong class="text-navy">Garanzie scritte.</strong> <span class="text-primary/70">Su prodotti e installazione, componente per componente.</span></p></li>
+          <li class="py-4 flex gap-4"><svg class="h-6 w-6 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><p class="pl-2"><strong class="text-navy">Sopralluogo onesto.</strong> <span class="text-primary/70">Se non conviene, te lo diciamo e non te lo vendiamo. Il preventivo è definitivo, senza costi nascosti.</span></p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOTO REALI DEI CANTIERI (prima del form) -->
+  <section class="pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+      <h2 class="text-3xl md:text-5xl text-navy">Ogni foto è un impianto <mark>installato da noi</mark>.</h2>
+      <p class="text-primary/65">Pannelli, inverter e batterie: foto reali dei nostri lavori.</p>
+    </div>
+    <div class="mt-8 flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-pl-4 md:scroll-pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] px-4 md:px-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] pb-3">
+      <img src="../b2c/assets/img/interventi/intervento-1.webp" alt="Moduli fotovoltaici su tetto in coppi, tra le case" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-9.webp" alt="Inverter, quadri e batteria di accumulo su parete in pietra" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-6.webp" alt="Impianto fotovoltaico su tetto in coppi con vista sulle montagne" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-4.webp" alt="Impianto fotovoltaico su tetto in coppi tra vigneti e colline" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-7.webp" alt="File di moduli fotovoltaici lungo un tetto in coppi" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-5.webp" alt="Moduli fotovoltaici su tetto in coppi in un centro abitato" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-11.webp" alt="Inverter e batterie di accumulo in un locale tecnico" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-10.webp" alt="Pannelli fotovoltaici su tetto a falda" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="../b2c/assets/img/interventi/intervento-3.webp" alt="Inverter e batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+    </div>
+  </section>
+
+  <!-- 7. FORM -->
+  <section class="scuro text-white py-14 md:py-20" style="background:linear-gradient(135deg,#077FBD 0%,#0A6B9C 55%,#262C40 100%)">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 md:grid md:grid-cols-12 md:gap-12 md:items-start">
+      <div class="md:col-span-5">
+        <h2 class="text-3xl md:text-5xl">Lasciaci il numero. <mark>Al resto pensiamo noi.</mark></h2>
+        <p class="mt-4 text-base md:text-lg text-white/80">Un tecnico della tua zona ti richiama entro 24 ore lavorative.</p>
+        <ol class="mt-8 space-y-5 border-l-2 border-white/25 ml-2 text-[15px]">
+          <li class="relative pl-6"><span class="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full bg-yellow"></span><span class="inline-block text-[11px] font-bold uppercase tracking-wider text-navy bg-yellow rounded-full px-2.5 py-0.5">Entro 24 ore</span><p class="mt-1.5"><strong class="text-white">Ti richiamiamo</strong> <span class="text-white/70">e fissiamo il sopralluogo.</span></p></li>
+          <li class="relative pl-6"><span class="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full bg-yellow"></span><span class="inline-block text-[11px] font-bold uppercase tracking-wider text-navy bg-yellow rounded-full px-2.5 py-0.5">Gratis, senza impegno</span><p class="mt-1.5"><strong class="text-white">Sopralluogo a casa tua</strong> <span class="text-white/70">su tetto e consumi reali.</span></p></li>
+          <li class="relative pl-6"><span class="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full bg-yellow"></span><span class="inline-block text-[11px] font-bold uppercase tracking-wider text-navy bg-yellow rounded-full px-2.5 py-0.5">Ci pensiamo noi</span><p class="mt-1.5"><strong class="text-white">Progetto e pratiche</strong> <span class="text-white/70">con preventivo definitivo.</span></p></li>
+          <li class="relative pl-6"><span class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-white ring-4 ring-yellow"></span><span class="inline-block text-[11px] font-bold uppercase tracking-wider text-navy bg-white rounded-full px-2.5 py-0.5">Entro 30 giorni dalla data concordata</span><p class="mt-1.5"><strong class="text-white">Impianto acceso</strong> <span class="text-white/70">come scritto nel contratto.</span></p></li>
+        </ol>
+        <div class="mt-8 pt-6 border-t border-white/20 text-sm text-white/75 space-y-2">
+          <p>Preferisci parlare subito? <a href="tel:+39800032645" data-cta="tel-form" class="font-bold text-white underline decoration-yellow decoration-2 underline-offset-4 num">800 032 645</a></p>
+          <p>Brokery Solar è la divisione fotovoltaico di Gruppo Brokery: 10 anni di storia, oltre 100.000 clienti seguiti in Italia, sede a Varese.</p>
+        </div>
+      </div>
+      <div class="mt-10 md:mt-0 md:col-span-7 md:justify-self-end w-full max-w-xl">
+        <div class="bg-white soft rounded-[1.5rem] p-2 md:p-3">
+          <div id="modulo" class="landing-form w-full" style="min-height:480px">
+          <!-- FORM GHL: incolla qui il codice embed (iframe + script) e togli min-height -->
+          </div>
+        </div>
+        <p class="mt-3 text-center text-xs text-white/60">Usiamo i tuoi dati solo per ricontattarti. Niente spam, nessuna cessione a terzi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section class="bg-nebbia py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 md:grid md:grid-cols-12 md:gap-12"
+      x-data="{ aperta: null, faq: [
+        {q:'Quanto costa un impianto con accumulo?', a:'Dipende da consumi, tetto e dimensionamento, quindi non pubblichiamo un listino. Al sopralluogo ricevi un preventivo definitivo, senza costi nascosti. Sull\'abitazione principale una parte della spesa torna con la detrazione fino al 50% (pagamenti entro il 31 dicembre 2026).'},
+        {q:'E quando il sole non c\'è?', a:'La batteria copre sera e notte con l\'energia prodotta di giorno. Nei periodi di minor produzione resti collegato alla rete: non resti mai al buio.'},
+        {q:'Quanto dura l\'impianto? E la manutenzione?', a:'I moduli hanno garanzie di prestazione fino a 25 anni, a seconda del produttore. La manutenzione ordinaria è minima. Nel preventivo trovi garanzie e coperture per ogni componente.'},
+        {q:'Posso abbinare anche la caldaia?', a:'Sì, con un sistema ibrido (pompa di calore + caldaia a condensazione) che usa l\'elettricità del tuo tetto. Il Conto Termico copre fino al 65% della spesa ammissibile dell\'intervento con pompa di calore, come sconto in fattura, e la pratica GSE la facciamo noi. Il fotovoltaico da solo non rientra nel Conto Termico.'},
+        {q:'Il sopralluogo mi impegna a qualcosa?', a:'No. È gratuito e senza impegno. Serve a darti numeri veri sulla tua casa: poi decidi tu, con calma.'}
+      ] }">
+      <div class="md:col-span-4">
+        <h2 class="text-3xl md:text-4xl text-navy">Le domande che ci fanno <mark>al telefono</mark>.</h2>
+        <a href="#modulo" data-cta="faq" class="cta mt-6 hidden md:inline-flex">Prenota il sopralluogo gratuito <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="mt-8 md:mt-0 md:col-span-8 space-y-2">
+        <template x-for="(f, i) in faq" :key="i">
+          <div class="bg-white rounded-xl border border-primary/10">
+            <button type="button" @click="aperta = aperta === i ? null : i" class="w-full flex justify-between items-center gap-4 px-5 py-4 text-left font-semibold text-navy" :aria-expanded="aperta === i">
+              <span x-text="f.q"></span>
+              <svg class="h-5 w-5 text-accent shrink-0 transition-transform" :class="aperta === i && 'rotate-180'" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <p x-show="aperta === i" x-transition.opacity x-cloak class="px-5 pb-5 -mt-1 text-primary/75 leading-relaxed" x-text="f.a"></p>
+          </div>
+        </template>
+        <a href="#modulo" data-cta="faq-mobile" class="cta w-full mt-6 md:hidden">Prenota il sopralluogo gratuito <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="note" class="bg-navy text-white/55 pb-24 md:pb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-12 flex flex-col md:flex-row justify-between gap-8 text-sm">
+      <div>
+        <span class="inline-flex items-center bg-white rounded-lg px-3 py-2 mb-4">
+          <img src="../b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" loading="lazy" class="h-6 w-auto">
+        </span>
+        <p class="text-xs leading-relaxed">Brokery Solar, divisione fotovoltaico ed efficienza energetica di Gruppo Brokery</p>
+      </div>
+      <div class="text-xs md:text-right leading-relaxed">
+        <p>BRK SOL SRL P.IVA IT04125210122</p>
+        <p class="mt-1">Via Magatti 3, 21100 Varese (VA)</p>
+        <p class="mt-1"><a href="tel:+39800032645" data-cta="tel-footer" class="hover:text-white">800 032 645</a> · <a href="mailto:info@brokerysolar.it" class="hover:text-white">info@brokerysolar.it</a></p>
+        <p class="mt-3">© 2026 · <a href="https://www.iubenda.com/privacy-policy/72459830" class="hover:text-white" target="_blank" rel="noopener">Privacy Policy</a>
+          · <a href="https://www.iubenda.com/privacy-policy/72459830/cookie-policy" class="hover:text-white" target="_blank" rel="noopener">Cookie Policy</a>
+          · <a href="https://www.iubenda.com/termini-e-condizioni/72459830" class="hover:text-white" target="_blank" rel="noopener">Termini e Condizioni</a></p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-6 pb-12">
+      <p class="text-[11px] leading-relaxed text-white/40 border-t border-white/15 pt-6">¹ Le informazioni sulle detrazioni fiscali si riferiscono alla normativa vigente alla data di pubblicazione (detrazione IRPEF fino al 50% per interventi sull'abitazione principale, per i pagamenti effettuati entro il 31 dicembre 2026; dal 2027 l'aliquota è destinata a scendere al 36%) e possono variare in base alla situazione fiscale personale e a futuri aggiornamenti normativi. La detrazione si recupera in 10 anni ed è soggetta a capienza fiscale. ² La riduzione «fino all'80%» della spesa per l'energia elettrica è riferita a condizioni ottimali di autoconsumo con fotovoltaico e accumulo. Le simulazioni di spesa e risparmio presenti in questa pagina hanno scopo puramente illustrativo: il risparmio effettivo dipende da consumi, esposizione, dimensionamento e abitudini di utilizzo. Il Conto Termico riconosce un contributo fino al 65% calcolato sulla spesa ammissibile secondo i massimali GSE, riferito all'intervento integrato che include la pompa di calore: il fotovoltaico installato da solo non è incentivabile dal Conto Termico.</p>
+    </div>
+  </footer>
+
+  <!-- CTA FISSA MOBILE -->
+  <div x-data="{ show: false }"
+    x-init="
+      const hero = document.getElementById('hero');
+      const form = document.getElementById('modulo');
+      let pastHero = false, formVisible = false;
+      const upd = () => show = pastHero && !formVisible;
+      new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; upd() }).observe(hero);
+      new IntersectionObserver(([e]) => { formVisible = e.isIntersecting; upd() }).observe(form);
+    "
+    x-show="show" x-cloak x-transition.opacity
+    class="md:hidden fixed inset-x-0 bottom-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-primary/10 flex gap-2"
+    style="padding-bottom: max(.75rem, env(safe-area-inset-bottom))">
+    <a href="#modulo" data-cta="sticky" class="cta flex-1 py-3.5 px-3 text-[15px]">Prenota il sopralluogo gratuito</a>
+    <a href="tel:+39800032645" data-cta="tel-sticky" class="inline-flex items-center justify-center px-4 rounded-[.9rem] border border-primary/20 text-navy font-semibold">Chiama</a>
+  </div>
+
+  <script src="bs-tracking.js" defer></script>
+</body>
+</html>
