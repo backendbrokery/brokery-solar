@@ -11,9 +11,9 @@
   <meta property="og:title" content="Fotovoltaico con accumulo: metà della spesa ti torna indietro.">
   <meta property="og:description" content="Detrazione fino al 50% in 10 anni. Impianto acceso entro 30 giorni, scritto nel contratto. Sopralluogo gratuito.">
   <meta property="og:image" content="/b2c/assets/img/og-image.jpg">
-  <link rel="icon" type="image/png" href="../b2c/assets/IconSolar.png">
-  <link rel="apple-touch-icon" href="../b2c/assets/IconSolar.png">
-  <link rel="preload" as="image" href="img/hero-casa-verticale.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/b2c/assets/IconSolar.png">
+  <link rel="apple-touch-icon" href="/b2c/assets/IconSolar.png">
+  <link rel="preload" as="image" href="/b2c-v2/img/hero-casa-verticale.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Schibsted+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -147,7 +147,7 @@
   <!-- TOP BAR -->
   <div class="testata absolute md:sticky top-0 inset-x-0 z-50 md:bg-white/90 md:backdrop-blur md:border-b md:border-primary/5">
     <div class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between h-14 md:h-16">
-      <img src="../b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" class="h-6 md:h-7 w-auto">
+      <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" class="h-6 md:h-7 w-auto">
       <a href="tel:+39800032645" data-cta="tel-header" class="inline-flex items-center gap-2 text-sm font-semibold text-navy border border-primary/15 hover:border-accent hover:text-accent px-3.5 py-1.5 rounded-xl transition-colors">
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.97.757l1 4a1 1 0 01-.29.98l-1.6 1.6a14 14 0 006.08 6.08l1.6-1.6a1 1 0 01.98-.29l4 1a1 1 0 01.757.97V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
         <span class="num">800 032 645</span>
@@ -161,7 +161,7 @@
   <header id="hero" class="md:px-6 md:pt-6 md:pb-12">
     <div class="relative max-w-6xl mx-auto md:grid md:grid-cols-12 md:items-center">
       <figure class="relative h-[clamp(356px,calc(100svh-324px),536px)] md:h-[min(86vh,860px)] md:min-h-[680px] md:col-start-5 md:col-span-8 md:row-start-1 md:rounded-[2rem] overflow-hidden">
-        <img src="img/hero-casa-verticale.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1536" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom md:object-center">
+        <img src="/b2c-v2/img/hero-casa-verticale.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1536" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom md:object-center">
         <svg id="hero-svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
           <defs>
             <linearGradient id="luceRaggio" gradientUnits="userSpaceOnUse" x1="968" y1="420" x2="500" y2="850"><stop offset="0" stop-color="#fff6d8" stop-opacity=".05"/><stop offset=".6" stop-color="#fff6d8" stop-opacity=".18"/><stop offset="1" stop-color="#fff6d8" stop-opacity=".4"/></linearGradient>
@@ -242,8 +242,8 @@
         mese: 150, usato: false,
         livelli: [
           { da: 0,   c: '#1F9D55', bg: '#EAF7EF', tag: 'Spesa contenuta', msg: 'Al sopralluogo ti diciamo con onestà se l\'impianto conviene anche a te.' },
-          { da: 120, c: '#077FBD', bg: '#EEF6FB', tag: 'Come una famiglia di 4', msg: 'È la spesa del nostro esempio: con fotovoltaico e accumulo scendeva a circa 400 € l\'anno.' },
-          { da: 200, c: '#E07800', bg: '#FFF4E5', tag: 'Spesa alta', msg: 'Ogni anno escono più di 2.400 € verso il fornitore. Vale la pena fare due conti.' },
+          { da: 120, c: '#077FBD', bg: '#EEF6FB', tag: 'Come una famiglia di 4', msg: 'Sei vicino al nostro esempio (150 € al mese): con fotovoltaico e accumulo la spesa scendeva a circa 400 € l\'anno.' },
+          { da: 200, c: '#E07800', bg: '#FFF4E5', tag: 'Spesa alta', msg: 'Ogni anno escono almeno 2.400 € verso il fornitore. Vale la pena fare due conti.' },
           { da: 320, c: '#D93025', bg: '#FDECEA', tag: 'Spesa molto alta', msg: 'Più di 3.800 € l\'anno in bolletta. Qui ogni mese di attesa pesa davvero.' }
         ],
         get liv() { let l = this.livelli[0]; for (const x of this.livelli) if (this.mese >= x.da) l = x; return l },
@@ -335,7 +335,7 @@
           <p class="mt-4 text-base md:text-lg text-primary/75">Di giorno i pannelli producono, la batteria accumula quello che non consumi. Di sera lo usi tu, invece di regalarlo alla rete. È lì che la bolletta scende davvero.</p>
         </div>
         <figure class="hidden md:block md:col-span-5">
-          <img src="../b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="w-full h-56 object-cover rounded-xl">
+          <img src="/b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="w-full h-56 object-cover rounded-xl">
         </figure>
       </div>
 
@@ -387,16 +387,16 @@
       <p class="text-primary/65">Pannelli, inverter e batterie: foto reali dei nostri lavori.</p>
     </div>
     <div class="mt-8 flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-pl-4 md:scroll-pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] px-4 md:px-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] pb-3">
-      <img src="../b2c/assets/img/interventi/intervento-1.webp" alt="Moduli fotovoltaici su tetto in coppi, tra le case" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-9.webp" alt="Inverter, quadri e batteria di accumulo su parete in pietra" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-6.webp" alt="Impianto fotovoltaico su tetto in coppi con vista sulle montagne" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-4.webp" alt="Impianto fotovoltaico su tetto in coppi tra vigneti e colline" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-7.webp" alt="File di moduli fotovoltaici lungo un tetto in coppi" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-5.webp" alt="Moduli fotovoltaici su tetto in coppi in un centro abitato" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-11.webp" alt="Inverter e batterie di accumulo in un locale tecnico" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-10.webp" alt="Pannelli fotovoltaici su tetto a falda" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
-      <img src="../b2c/assets/img/interventi/intervento-3.webp" alt="Inverter e batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-1.webp" alt="Moduli fotovoltaici su tetto in coppi, tra le case" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-9.webp" alt="Inverter, quadri e batteria di accumulo su parete in pietra" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-6.webp" alt="Impianto fotovoltaico su tetto in coppi con vista sulle montagne" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-8.webp" alt="Inverter e due batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-4.webp" alt="Impianto fotovoltaico su tetto in coppi tra vigneti e colline" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-7.webp" alt="File di moduli fotovoltaici lungo un tetto in coppi" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-5.webp" alt="Moduli fotovoltaici su tetto in coppi in un centro abitato" width="1200" height="900" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-11.webp" alt="Inverter e batterie di accumulo in un locale tecnico" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-10.webp" alt="Pannelli fotovoltaici su tetto a falda" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
+      <img src="/b2c/assets/img/interventi/intervento-3.webp" alt="Inverter e batterie di accumulo installati a parete" width="900" height="1200" loading="lazy" class="snap-start h-72 md:h-96 w-auto rounded-[1.5rem] object-cover shrink-0">
     </div>
   </section>
 
@@ -462,7 +462,7 @@
     <div class="max-w-6xl mx-auto px-4 md:px-6 py-12 flex flex-col md:flex-row justify-between gap-8 text-sm">
       <div>
         <span class="inline-flex items-center bg-white rounded-lg px-3 py-2 mb-4">
-          <img src="../b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" loading="lazy" class="h-6 w-auto">
+          <img src="/b2c/assets/LogoSolar.png" alt="Brokery Solar" width="679" height="137" loading="lazy" class="h-6 w-auto">
         </span>
         <p class="text-xs leading-relaxed">Brokery Solar, divisione fotovoltaico ed efficienza energetica di Gruppo Brokery</p>
       </div>
@@ -497,6 +497,6 @@
     <a href="tel:+39800032645" data-cta="tel-sticky" class="inline-flex items-center justify-center px-4 rounded-[.9rem] border border-primary/20 text-navy font-semibold">Chiama</a>
   </div>
 
-  <script src="bs-tracking.js" defer></script>
+  <script src="/b2c-v2/bs-tracking.js" defer></script>
 </body>
 </html>
