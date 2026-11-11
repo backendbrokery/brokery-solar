@@ -83,7 +83,7 @@
     /* Animazioni continue del hero: luce che scende, flusso verso l'accumulo */
     .raggio { animation: respiro 5s ease-in-out infinite; }
     @keyframes respiro { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
-    .flusso { fill: none; stroke: #ffd800; stroke-width: 4.5; stroke-linecap: round; stroke-dasharray: 1 10; animation: scorre 1s linear infinite; vector-effect: non-scaling-stroke; }
+    .flusso { fill: none; stroke: #ffd800; stroke-width: 4.5; stroke-linecap: round; stroke-dasharray: 1 11; animation: scorre 1s linear infinite; vector-effect: non-scaling-stroke; }
     @keyframes scorre { to { stroke-dashoffset: -24; } }
     .carica { transform-box: fill-box; transform-origin: left center; animation: carica 3.2s ease-in-out infinite; }
     @keyframes carica { 0% { transform: scaleX(.25); } 70%, 100% { transform: scaleX(1); } }
@@ -160,7 +160,7 @@
        L'immagine è un'illustrazione generata, non una foto di un nostro cantiere: niente etichetta "foto reale". -->
   <header id="hero" class="md:px-6 md:pt-6 md:pb-12">
     <div class="relative max-w-6xl mx-auto md:grid md:grid-cols-12 md:items-center">
-      <figure class="relative h-[clamp(356px,calc(100svh-324px),536px)] md:h-[min(86vh,860px)] md:min-h-[680px] md:col-start-5 md:col-span-8 md:row-start-1 md:rounded-[2rem] overflow-hidden">
+      <figure class="relative h-[clamp(356px,calc(100svh-290px),640px)] md:h-[min(86vh,860px)] md:min-h-[680px] md:col-start-5 md:col-span-8 md:row-start-1 md:rounded-[2rem] overflow-hidden">
         <img src="/b2c-v2/img/hero-casa-verticale.webp" alt="Casa in collina al tramonto con pannelli fotovoltaici sul tetto e batteria di accumulo sul muro" width="1024" height="1536" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-bottom md:object-center">
         <svg id="hero-svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
           <defs>
@@ -207,8 +207,9 @@
             <circle class="v" cx="340" cy="830" r="6"/>
           </g>
         </svg>
+        <span class="hidden md:block absolute bottom-4 right-5 text-[11px] font-medium text-white/50 [text-shadow:0_1px_2px_rgba(0,0,0,.55)]">Immagine illustrativa</span>
         <div class="absolute left-3 bottom-[52px] md:left-auto md:bottom-auto md:top-6 md:right-6 flex flex-col items-start md:items-end gap-1.5">
-          <span class="pl-1 text-[10px] md:text-[11px] font-medium text-white/50 [text-shadow:0_1px_2px_rgba(0,0,0,.55)]">Immagine illustrativa</span>
+          <span class="md:hidden pl-1 text-[10px] font-medium text-white/50 [text-shadow:0_1px_2px_rgba(0,0,0,.55)]">Immagine illustrativa</span>
           <div class="flex flex-wrap gap-2">
             <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur text-navy text-[12px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-sm"><svg class="h-3.5 w-3.5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6zm0 8.2A2.2 2.2 0 1 1 10 5.8a2.2 2.2 0 0 1 0 4.4z"/></svg>Lombardia</span>
             <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur text-navy text-[12px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-sm"><svg class="h-3.5 w-3.5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M7.6 13.2 4.4 10l-1.2 1.2 4.4 4.4 9.2-9.2-1.2-1.2z"/></svg>Sopralluogo gratuito</span>
